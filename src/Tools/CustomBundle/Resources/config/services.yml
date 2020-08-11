@@ -1,0 +1,7 @@
+services:
+    tools_custom.logs:
+        class: Tools\CustomBundle\Service\UpdateLog
+        arguments: [ "@security.token_storage", "@session" ]
+        tags:
+            - { name: doctrine.event_listener, event: preUpdate }
+            - { name: doctrine.event_listener, event: postUpdate }
