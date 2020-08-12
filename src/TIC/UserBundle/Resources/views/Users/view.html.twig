@@ -1,0 +1,93 @@
+{% extends "TICPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ 'users'|trans }} - {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset("assets/clip-one/plugins/DataTables/dataTables.bootstrap.min.css") }}">
+    <link href="{{ asset("assets/clip-one/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css") }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset("assets/clip-one/plugins/bootstrap-modal/css/bootstrap-modal.css") }}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% block UsersMenu %}
+    <ul class="nav nav-second-level">
+        <li>
+            <a href="{{ path('tic_platform_users_add') }}"><i class="fa fa-edit fa-fw"></i> {{ 'menu.details' |trans }}</a>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="page-header">{{ 'users' | trans }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {{ 'user.list' | trans }}
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped table-bordered table-hover dataTable">
+                        <thead>
+                        <tr>
+                            <th>{{ 'user.email' | trans }}</th>
+                            <th>{{ 'user.username'| trans }}</th>
+                            <th>{{ 'actions' | trans }}</th>
+                            <th class="hidden"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% if users|length > 0 %}
+                            {% for user in users %}
+                                <tr>
+                                    <td>{{ user.email }}</td>
+                                    <td>{{ user.username }}</td>
+                                    <td class="center">
+                                        <div class="visible-md visible-lg hidden-sm hidden-xs">
+                                            <a href="{{ path('tic_platform_users_edit', {'id':user.id}) }}" class="btn btn-xs btn-teal tooltips" data-placement="top" data-original-title="{{ 'edit'|trans }}"><i class="fa fa-edit"></i></a>
+                                            {% if user != app.user %}
+                                                <a class="btn btn-xs btn-bricky tooltips deleteUser" data-placement="top" data-original-title="{{ 'delete'|trans }}"><i class="fa fa-trash-o"></i></a>
+                                            {% endif %}
+                                        </div>
+                                    </td>
+                                    <td class="hidden userID">{{ user.id }}</td>
+                                </tr>
+                            {% endfor %}
+                        {% endif %}
+                        </tbody>
+                    </table>
+                    <table class="buttonline col-md-12 ">
+                        <tbody>
+                        <tr>
+                            <td align="left">
+                                <a href="{{ path('tic_platform_users_add') }}" type="button" class="btn btn-default">{{ 'add'|trans }}</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'ToolsCustomBundle::modalRemove.html.twig' with {
+        'modalID' : 'modalDeleteUser', 'title' : 'user.title'|trans, 'message' : 'user.remove.message'|trans, 'messageModalID' : 'messageModal'
+    } %}
+
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/bootstrap-modal/js/bootstrap-modal.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/bootstrap-modal/js/bootstrap-modalmanager.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/DataTables/jquery.dataTables.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/DataTables/dataTables.bootstrap.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/main.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/User.js") }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script type="text/javascript" src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+{% endblock %}
