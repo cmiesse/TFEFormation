@@ -1,0 +1,74 @@
+<?php
+
+namespace TIC\PlatformBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Languages
+ *
+ * @ORM\Table(name="Languages")
+ * @ORM\Entity(repositoryClass="TIC\PlatformBundle\Entity\LanguagesRepository")
+ */
+class Languages
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Language", type="string", length=255)
+     */
+    private $language;
+
+    /**
+     * @ORM\OneToMany(targetEntity="TIC\PlatformBundle\Entity\Trainers", mappedBy="languages")
+     */
+    private $trainers;
+
+    /**
+     * @ORM\OneToMany(targetEntity="TIC\PlatformBundle\Entity\Sessions", mappedBy="language")
+     */
+    private $sessions;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set language
+     *
+     * @param string $language
+     * @return Languages
+     */
+    public function setLanguage($language)
+    {
+        $this->language = $language;
+
+        return $this;
+    }
+
+    /**
+     * Get language
+     *
+     * @return string 
+     */
+    public function getLanguage()
+    {
+        return $this->language;
+    }
+}

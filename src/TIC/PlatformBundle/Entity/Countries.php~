@@ -1,0 +1,73 @@
+<?php
+
+namespace TIC\PlatformBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Countries
+ *
+ * @ORM\Table(name="Countries")
+ * @ORM\Entity(repositoryClass="TIC\PlatformBundle\Entity\CountriesRepository")
+ */
+class Countries
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="CountryName", type="string", length=255)
+     */
+    private $countryName;
+
+    /**
+     * @ORM\OneToMany(targetEntity="TIC\PlatformBundle\Entity\Trainers", mappedBy="Country")
+     */
+    private $trainers;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Addresses", mappedBy="countries")
+     */
+    private $addresses;
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set countryName
+     *
+     * @param string $countryName
+     * @return Countries
+     */
+    public function setCountryName($countryName)
+    {
+        $this->countryName = $countryName;
+
+        return $this;
+    }
+
+    /**
+     * Get countryName
+     *
+     * @return string 
+     */
+    public function getCountryName()
+    {
+        return $this->countryName;
+    }
+}

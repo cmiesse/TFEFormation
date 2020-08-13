@@ -1,0 +1,45 @@
+<?php
+
+namespace TIC\PlatformBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
+/**
+ * Employer
+ *
+ * @ORM\Table(name="Employers")
+ * @ORM\Entity
+ */
+class Employer
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="EmployerID", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $employerID;
+
+    /**
+     * @var string
+     * @Assert\NotBlank()
+     * @ORM\Column(name="EmployerName", type="string", nullable=false, length=255)
+     */
+    private $employerName;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Trainers", mappedBy="employer")
+     */
+    private $trainers;
+
+    /**
+     * @return bool
+     */
+    public function isDeletable()
+    {
+        return count($this->trainers) == 0;
+    }
+}
