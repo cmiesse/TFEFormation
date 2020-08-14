@@ -1,0 +1,289 @@
+tic_platform_clients:
+    path: /clients
+    defaults:
+        _controller: TICPlatformBundle:Client:index
+
+tic_platform_clients_add:
+    path: /clients/add
+    defaults:
+        _controller: TICPlatformBundle:Client:add
+
+tic_platform_clients_edit:
+    path: /clients/{id}
+    defaults:
+        _controller: TICPlatformBundle:Client:edit
+
+tic_platform_clients_delete:
+    path: /clients/{id}/remove
+    defaults:
+        _controller: TICPlatformBundle:Client:delete
+    requirements:
+        id: \d*
+    methods: [ GET ]
+    options:
+        expose: true
+
+tic_platform_clients_address:
+    path: /clients/{id}/address/{idAddress}
+    defaults:
+        _controller: TICPlatformBundle:Client:address
+        idAddress: -1
+    options:
+        expose: true
+
+tic_platform_clients_delete_address:
+    path: /clients/{id}/clientAddress/{idAddress}/remove
+    defaults:
+        _controller: TICPlatformBundle:Client:deleteAddress
+    requirements:
+        id: \d*
+        idAddress: \d*
+    methods: [ GET ]
+    options:
+        expose: true
+
+tic_platform_clients_contact:
+    path: /clients/{id}/contact/{idContact}
+    defaults:
+        _controller: TICPlatformBundle:Client:contact
+        idContact: -1
+    options:
+            expose: true
+
+tic_platform_clients_delete_contact:
+    path: /clients/{id}/contactPeople/{idContact}/remove
+    defaults:
+        _controller: TICPlatformBundle:Client:deleteContact
+    requirements:
+        id: \d*
+        idContact: \d*
+    methods: [ GET ]
+    options:
+        expose: true
+
+tic_platform_contracts:
+    path: /clients/{id}/contracts
+    defaults:
+        _controller: TICPlatformBundle:Contract:index
+
+tic_platform_contracts_add:
+    path: /clients/{id}/contracts/add
+    defaults:
+        _controller: TICPlatformBundle:Contract:add
+
+tic_platform_contracts_edit:
+    path: /clients/{id}/contracts/details/{idContract}
+    defaults:
+        _controller: TICPlatformBundle:Contract:edit
+
+tic_platform_contracts_delete:
+    path: /clients/{id}/contracts/{idContract}/remove
+    defaults:
+        _controller: TICPlatformBundle:Contract:delete
+    requirements:
+        id: \d*
+        idContract: \d*
+    methods: [ GET ]
+    options:
+        expose: true
+
+tic_platform_trainings:
+    path: /trainings
+    defaults:
+        _controller: TICPlatformBundle:Training:index
+
+tic_platform_trainings_add:
+    path: /trainings/add
+    defaults:
+        _controller: TICPlatformBundle:Training:add
+
+tic_platform_trainings_edit:
+    path: /trainings/{id}
+    defaults:
+        _controller: TICPlatformBundle:Training:edit
+
+tic_platform_trainings_delete:
+    path: /trainings/{id}/remove
+    defaults:
+        _controller: TICPlatformBundle:Training:delete
+    requirements:
+        id: \d*
+    methods: [ GET ]
+    options:
+        expose: true
+
+tic_platform_trainers:
+    path: /trainers
+    defaults:
+        _controller: TICPlatformBundle:Trainer:index
+
+tic_platform_trainers_add:
+    path: /trainers/add
+    defaults:
+        _controller: TICPlatformBundle:Trainer:add
+
+tic_platform_trainers_edit:
+    path: /trainers/{id}
+    defaults:
+        _controller: TICPlatformBundle:Trainer:edit
+
+tic_platform_trainers_delete:
+    path: /trainers/{id}/remove
+    defaults:
+        _controller: TICPlatformBundle:Trainer:delete
+    requirements:
+        id: \d*
+    methods: [ GET ]
+    options:
+        expose: true
+
+tic_platform_sessions:
+    path: /sessions
+    defaults:
+        _controller: TICPlatformBundle:Session:index
+
+tic_platform_sessions_add:
+    path: /sessions/add
+    defaults:
+        _controller: TICPlatformBundle:Session:add
+
+tic_platform_sessions_edit:
+    path: /sessions/{id}
+    defaults:
+        _controller: TICPlatformBundle:Session:edit
+
+tic_platform_sessions_edit_planning:
+    path:   /sessions/{id}/plannings
+    defaults:
+        _controller: TICPlatformBundle:Planning:show
+    requirements:
+        id: \d*
+    methods: [ GET ]
+
+tic_platform_sessions_delete:
+    path: /sessions/{id}/remove
+    defaults:
+        _controller: TICPlatformBundle:Session:delete
+    requirements:
+        id: \d*
+    methods: [ GET ]
+    options:
+        expose: true
+
+tic_platform_contract_get_addresses:
+    path:     /contract/{contractID}/addresses/get
+    defaults:
+        _controller: TICPlatformBundle:Session:getAddresses
+    requirements:
+        contractID: \d*
+    methods: [ GET ]
+    options:
+        expose: true
+
+tic_platform_planning:
+    path: /plannings
+    defaults:
+        _controller: TICPlatformBundle:Planning:index
+
+tic_platform_planning_info:
+    path:   /plannings/sessions/{sessionID}
+    defaults:
+        _controller: TICPlatformBundle:Planning:getInfo
+    requirements:
+        sessionID: \d*|-1
+    methods: [ GET ]
+    options:
+        expose: true
+
+tic_platform_planning_update:
+    path:   /plannings/update/{sessionID}
+    defaults:
+        _controller: TICPlatformBundle:Planning:updateInfo
+    requirements:
+        sessionID: \d*|-1
+    options:
+        expose: true
+
+tic_platform_users:
+    path: /users
+    defaults:
+        _controller: TICUserBundle:User:index
+
+tic_platform_users_add:
+    path: /users/add
+    defaults:
+        _controller: TICUserBundle:User:add
+
+tic_platform_users_edit:
+    path: /users/{id}
+    defaults:
+        _controller: TICUserBundle:User:edit
+
+tic_platform_users_delete:
+    path: /users/{id}/remove
+    defaults:
+        _controller: TICUserBundle:User:delete
+    requirements:
+        id: \d*
+    options:
+        expose: true
+    methods: [ GET ]
+
+tic_platform_events:
+    path: /events
+    defaults:
+        _controller: TICPlatformBundle:Event:index
+    options:
+        expose: true
+
+tic_platform_main_parameters:
+    resource: parameter.yml
+
+tic_platform_main_webmaster:
+    path:     /webmaster
+    defaults:
+        _controller: TICPlatformBundle:Webmaster:index
+    methods: [ GET ]
+
+tic_platform_main_validate_form_toggle:
+    path:     /webmaster_action/validate_form
+    defaults:
+        _controller: TICPlatformBundle:Webmaster:toggleValidateForm
+    methods: [ GET ]
+
+tic_platform_main_webmaster_calendar_list:
+    path:     /webmaster/calendars
+    defaults:
+        _controller: TICPlatformBundle:Webmaster:resetCalendar
+
+tic_platform_main_webmaster_calendar_reset:
+    path:     /webmaster/calendars/{trainerID}/reset
+    defaults:
+        _controller: TICPlatformBundle:Webmaster:resetOneCalendar
+    requirements:
+        trainerID: \d*
+    methods: [ POST ]
+    options:
+        expose: true
+
+tic_platform_main_download_file:
+    path:     /download/{docType}/{documentID}
+    defaults:
+        _controller: TICPlatformBundle:Document:download
+    methods: [ GET ]
+
+tic_platform_main_remove_file:
+    path:     /trainers/{trainerID}/documents/{documentID}/{documentType}/remove
+    defaults:
+        _controller: TICPlatformBundle:Document:remove
+    requirements:
+        trainerID: \d*
+        documentID: \d*
+    methods: [ POST ]
+    options:
+        expose: true
+
+tic_platform_main_maintenance:
+    path:     /maintenance
+    defaults:
+        _controller: TICPlatformBundle:Maintenance:index

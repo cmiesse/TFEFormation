@@ -1,0 +1,23 @@
+{% extends "TICPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ 'editors'|trans }} - {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">{{ 'editor.edit' |trans }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        {% include "TICPlatformBundle:Editor:form.html.twig" %}
+    </div>
+    {% include "TICPlatformBundle:Common:cancel.html.twig" with {'route' : path('tic_platform_main_editor_index')} %}
+
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script type="application/javascript" src="{{ asset('js/main.js') }}"></script>
+{% endblock %}

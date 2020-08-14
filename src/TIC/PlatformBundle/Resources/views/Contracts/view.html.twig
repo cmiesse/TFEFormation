@@ -1,0 +1,102 @@
+{% extends "TICPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ 'contracts'|trans }} - {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset("assets/clip-one/plugins/DataTables/dataTables.bootstrap.min.css") }}">
+    <link href="{{ asset("assets/clip-one/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css") }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset("assets/clip-one/plugins/bootstrap-modal/css/bootstrap-modal.css") }}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+    <div class="hidden" id="clientID">{{ id }}</div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">{{ 'contract' |trans }}</h1>
+        </div>
+        <!-- /.col-md-12 -->
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            {{ 'contract.list' |trans }}
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-striped table-bordered table-hover dataTable">
+                        <thead>
+                        <tr>
+                            <th>{{ 'contract.number' |trans }}</th>
+                            <th>{{ 'contract.begin.date' |trans }}</th>
+                            <th>{{ 'contract.end.date' |trans }}</th>
+                            <th>{{ 'contract.days.number' |trans }}</th>
+                            <th>{{ 'contract.extended.date' |trans }}</th>
+                            <th>{{ 'contract.daily.amount' |trans }}</th>
+                            <th>{{ 'contract.total.amount' |trans }}</th>
+                            <th>{{ 'contract.balance' |trans }}</th>
+                            <th>{{ 'contract.facturation.mode' |trans }}</th>
+                            <th>{{ 'actions' |trans }}</th>
+                            <th class="hidden"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% if contracts |length > 0 %}
+                            {% for contract in contracts %}
+                                <tr>
+                                    <td>{{ contract.contractNumber }}</td>
+                                    <td class="text-center">{{ contract.contractBeginDate|date("d-m-Y") }}</td>
+                                    <td class="text-center">{{ contract.contractEndDate|date("d-m-Y") }}</td>
+                                    <td class="text-right">{{ contract.contractDaysNumber }}</td>
+                                    <td class="text-center">{% if contract.contractExtendedEndDate != null %}{{ contract.contractExtendedEndDate|date("d-m-Y") }}{% endif %}</td>
+                                    <td class="text-right">{{ contract.contractDailyAmount }}</td>
+                                    <td class="text-right">{{ contract.contractTotalAmount }}</td>
+                                    <td class="text-right">{{ contract.contractBalance }}</td>
+                                    <td>{{ contract.facturationMode.facturationModeLabel }}</td>
+                                    <td class="center">
+                                        <div class="visible-md visible-lg hidden-sm hidden-xs">
+                                            <a href="{{ path('tic_platform_contracts_edit', {'id':id, 'idContract': contract.id}) }}" class="btn btn-xs btn-teal tooltips" data-placement="top" data-original-title="{{ 'edit'|trans }}"><i class="fa fa-edit"></i></a>
+                                            <a class="btn btn-xs btn-bricky tooltips deleteContract" data-placement="top" data-original-title="{{ 'delete'|trans }}"><i class="fa fa-trash-o"></i></a>
+                                        </div>
+                                    </td>
+                                    <td class="hidden contractID">{{ contract.id }}</td>
+                                </tr>
+                            {% endfor %}
+                        {% endif %}
+                        </tbody>
+                    </table>
+                    <table class="buttonline col-md-12 ">
+                        <tbody>
+                            <tr>
+                                <td align="left">
+                                    <a href="{{ path('tic_platform_contracts_add',  {'id': id}) }}" class="btn btn-default">{{ 'add'|trans }}</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "TICPlatformBundle:Common:cancel.html.twig" with {"route" : path('tic_platform_clients')} %}
+    {% include 'ToolsCustomBundle::modalRemove.html.twig' with {
+        'modalID' : 'modalDeleteContract', 'title' : 'contract.title'|trans, 'message' : 'contract.remove.message'|trans, 'messageModalID' : 'messageModal'
+    } %}
+
+{% endblock %}
+
+
+{% block js %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/bootstrap-modal/js/bootstrap-modal.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/bootstrap-modal/js/bootstrap-modalmanager.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/DataTables/jquery.dataTables.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/DataTables/dataTables.bootstrap.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/main.js") }}"> </script>
+    <script type="text/javascript" src="{{ asset("js/Contract.js") }}"> </script>
+    <script type="text/javascript" src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script type="text/javascript" src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+{% endblock %}

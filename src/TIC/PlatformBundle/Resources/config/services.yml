@@ -1,0 +1,26 @@
+services:
+#    tic_platform.example:
+#        class: TIC\PlatformBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+    tic_platform.menu_builder:
+        class     : TIC\PlatformBundle\Menu\MenuBuilder
+        arguments : [ "@service_container" ]
+
+    tic_platform.menu.main:
+        class     : KnpMenuMenuItem
+        factory_service : tic_platform.menu_builder
+        factory_method  : createSidebarMenu
+        arguments : [ "@request_stack" ]
+        scope     : request
+        tags      :
+            - { name: knp_menu.menu, alias: sidebar }
+
+    tic_platform.google_calendar:
+        class     : TIC\PlatformBundle\Services\GoogleCalendarService
+        arguments: [ "@doctrine.orm.entity_manager" ]
+
+    tic_platform.kernel_listener:
+        class: TIC\PlatformBundle\Services\KernelListener
+        arguments: [ @security.authorization_checker, @router, "%maintenance%" ]
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }

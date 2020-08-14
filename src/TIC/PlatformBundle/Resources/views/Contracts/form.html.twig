@@ -1,0 +1,97 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        {{ 'contract.details' |trans }}
+    </div>
+    <div class="panel-body">
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+        <div class="row">
+            <div class="form-group col-md-12">
+                {{ form_label(form.contractNumber ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.contractNumber) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.contractNumber) }}
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                {{ form_label(form.contractTotalAmount ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.contractTotalAmount) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.contractTotalAmount) }}
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                {{ form_label(form.contractDailyAmount ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.contractDailyAmount) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.contractDailyAmount) }}
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                {{ form_label(form.contractBalance ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.contractBalance) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.contractBalance) }}
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                {{ form_label(form.contractDaysNumber ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.contractDaysNumber) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.contractDaysNumber) }}
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                {{ form_label(form.facturationMode ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.facturationMode) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.facturationMode) }}
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                {{ form_label(form.contractBeginDate ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.contractBeginDate) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.contractBeginDate) }}
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                {{ form_label(form.contractEndDate ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.contractEndDate) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.contractEndDate) }}
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                {{ form_label(form.contractExtendedEndDate ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.contractExtendedEndDate) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.contractExtendedEndDate) }}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-md-offset-9">
+            {{ form_widget(form.save) }}
+        </div>
+        {{ form_end(form) }}
+    </div>
+</div>
+

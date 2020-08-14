@@ -1,0 +1,20 @@
+{% extends "TICPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ 'clients'|trans }} - {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">{{ 'client.new' | trans }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            {% include "TICPlatformBundle:Clients:form.html.twig" %}
+        </div>
+    </div>
+    {% include "TICPlatformBundle:Common:cancel.html.twig" with {"route" : path('tic_platform_clients')} %}
+
+{% endblock %}

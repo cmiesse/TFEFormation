@@ -1,0 +1,94 @@
+{% extends "TICPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ 'clients'|trans }} - {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset("assets/clip-one/plugins/DataTables/dataTables.bootstrap.min.css") }}">
+    <link href="{{ asset("assets/clip-one/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css") }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset("assets/clip-one/plugins/bootstrap-modal/css/bootstrap-modal.css") }}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">{{ 'clients' | trans }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {{ 'client.list' | trans }}
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped table-bordered table-hover dataTable">
+                        <thead>
+                            <tr>
+                                <th>{{ 'client.abbreviation' |trans }}</th>
+                                <th>{{ 'client.name' | trans }}</th>
+                                <th>{{ 'client.category'| trans }}</th>
+                                <th>{{ 'client.VATNumber' | trans }}</th>
+                                <th>{{ 'address.locality' | trans }}</th>
+                                <th>{{ 'actions' | trans }}</th>
+                                <th class="hidden"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% if clients|length > 0 %}
+                            {% for client in clients %}
+                                <tr>
+                                    <td>{{ client.clientAbbreviation }}</td>
+                                    <td>{{ client.clientName }}</td>
+                                    <td>{{ client.clientCategory.clientCategoryLabel }}</td>
+                                    <td>{{ client.clientTVANumber }}</td>
+                                    <td>
+                                        {% if client.getSingleAddress.address|length > 0  %}
+                                            {{ client.getSingleAddress.address.addressLocality }}
+                                        {% endif %}
+                                    </td>
+                                    <td class="center">
+                                        <div class="visible-md visible-lg hidden-sm hidden-xs">
+                                            <a href="{{ path('tic_platform_clients_edit', {'id':client.id}) }}" class="btn btn-xs btn-teal tooltips" data-placement="top" data-original-title="{{ 'edit'|trans }}"><i class="fa fa-edit"></i></a>
+                                            <a href="{{ path('tic_platform_contracts', {'id':client.id}) }}" class="btn btn-xs btn-success tooltips" data-placement="top" data-original-title="{{ 'contract'|trans }}"><i class="fa fa-file"></i></a>
+                                            <a class="btn btn-xs btn-bricky tooltips deleteClient" data-placement="top" data-original-title="{{ 'delete'|trans }}"><i class="fa fa-trash-o"></i></a>
+                                        </div>
+                                    </td>
+                                    <td class="hidden clientID">{{ client.id }}</td>
+                                </tr>
+                            {% endfor %}
+                        {% endif %}
+                        </tbody>
+                    </table>
+                    <table class="buttonline col-md-12 ">
+                        <tbody>
+                        <tr>
+                            <td align="left">
+                                <a href="{{ path('tic_platform_clients_add') }}" class="btn btn-default">{{ 'add' | trans }}</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'ToolsCustomBundle::modalRemove.html.twig' with {
+        'modalID' : 'modalDeleteClient', 'title' : 'client.title'|trans, 'message' : 'client.remove.message'|trans, 'messageModalID' : 'messageModal'
+    } %}
+
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/bootstrap-modal/js/bootstrap-modal.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/bootstrap-modal/js/bootstrap-modalmanager.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/DataTables/jquery.dataTables.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/DataTables/dataTables.bootstrap.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/main.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/Client.js") }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script type="text/javascript" src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+{% endblock %}

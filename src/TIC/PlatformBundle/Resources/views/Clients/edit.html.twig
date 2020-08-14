@@ -1,0 +1,213 @@
+{% extends "TICPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ 'clients'|trans }} - {{ parent() }}
+{% endblock %}
+
+{% block stylesheets  %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset("assets/clip-one/plugins/DataTables/dataTables.bootstrap.min.css") }}">
+    <link href="{{ asset("assets/clip-one/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css") }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset("assets/clip-one/plugins/bootstrap-modal/css/bootstrap-modal.css") }}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+    <div class="hidden" id="clientID">{{ CLIENTID }}</div>
+    <div class="hidden" id="addressID">-1</div>
+    <div class="hidden" id="contactID">-1</div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">{{ 'client.edit' |trans }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            {% include "TICPlatformBundle:Clients:form.html.twig" %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {{ 'address' |trans }}
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table table-striped table-bordered table-hover dataTable">
+                                <thead>
+                                <tr>
+                                    <th>{{ 'clientAddress.delivery' |trans }}</th>
+                                    <th>{{ 'address.line' | trans }}</th>
+                                    <th>{{ 'address.zip.code'| trans }}</th>
+                                    <th>{{ 'address.locality' | trans }}</th>
+                                    <th>{{ 'address.country' | trans }}</th>
+                                    <th>{{ 'clientAddress.name' | trans }}</th>
+                                    <th>{{ 'clientAddress.phone' | trans }}</th>
+                                    <th>{{ 'actions' | trans }}</th>
+                                    <th class="hidden">hid</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% if client.clientAddresses|length > 0 %}
+                                    {% for clientAddress in client.clientAddresses %}
+                                        <tr>
+                                            <td class="center">
+                                                <input type="checkbox" disabled {% if clientAddress.clientAddressDelivery %}checked{% endif %}>
+                                            </td>
+                                            <td>{{ clientAddress.address.addressLine1 }}</td>
+                                            <td>{{ clientAddress.address.addressZipCode }}</td>
+                                            <td>{{ clientAddress.address.addressLocality }}</td>
+                                            <td>{{ clientAddress.address.countries.countryName }}</td>
+                                            <td>{{ clientAddress.clientAddressLastname }} {{ clientAddress.clientAddressFirstname }}</td>
+                                            <td>{{ clientAddress.clientAddressPhone }}</td>
+                                            <td class="center">
+                                                <div class="visible-md visible-lg hidden-sm hidden-xs">
+                                                    <a class="btn btn-xs btn-teal tooltips editAddress" data-placement="top" data-original-title="{{ 'edit'|trans }}"><i class="fa fa-edit"></i></a>
+                                                    <a class="btn btn-xs btn-bricky tooltips deleteAddress" data-placement="top" data-original-title="{{ 'delete'|trans }}"><i class="fa fa-trash-o"></i></a>
+                                                </div>
+                                            </td>
+                                            <td class="hidden clientAddressID">{{ clientAddress.id }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                {% endif %}
+                                </tbody>
+                            </table>
+                            <table class="buttonline col-md-12 ">
+                                <tbody>
+                                    <tr>
+                                        <td align="left">
+                                            <button type="button" id="addAddress" class="btn btn-default" data-toggle="modal" data-target="#myModal1">{{ 'add' |trans }}</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            {% include 'ToolsCustomBundle::modalRemove.html.twig' with {
+                                'modalID' : 'modalDeleteAddress', 'title' : 'client.address.title'|trans, 'message' : 'client.address.remove.message'|trans, 'messageModalID' : 'messageModalAddress'
+                            } %}
+                        </div>
+                        <div class="modal fade" tabindex="-1" data-width="760" style="display: none;" id="modalAddress">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title">{{ 'modal.ClientAddress' | trans }}</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-12" id="addressData"></div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="javascript:void(0);" id="SaveAddress" class="btn btn-primary">{{ 'save' | trans }}</a>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">{{ 'close' | trans }}</button>
+                            </div>
+                        </div><!-- /.modal -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {{ 'client.contact.people' |trans }}
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            {#{% include "TICPlatformBundle:ContactPeople:form.html.twig" %}#}
+                            <table class="table table-striped table-bordered table-hover dataTable">
+                                <thead>
+                                <tr>
+                                    <th>{{ 'contactPerson.name' |trans }}</th>
+                                    <th>{{ 'contactPerson.mail' | trans }}</th>
+                                    <th>{{ 'contactPerson.phone' | trans }}</th>
+                                    <th>{{ 'contactPerson.function' | trans }}</th>
+                                    <th>{{ 'contactPerson.language' | trans }}</th>
+                                    <th>{{ 'contactPerson.gender' | trans }}</th>
+                                    <th>{{ 'address' | trans }}</th>
+                                    <th>{{ 'actions' | trans }}</th>
+                                    <th class="hidden">hid</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% if client|length > 0 %}
+                                    {% for contactPerson in client.contactPeople %}
+                                        <tr>
+                                            <td>{{ contactPerson.contactPersonFirstname }} {{ contactPerson.contactPersonLastname }}</td>
+                                            <td>{{ contactPerson.contactPersonMail }}</td>
+                                            <td>{{ contactPerson.contactPersonPhone }}</td>
+                                            <td>{{ contactPerson.contactPersonFunction }}</td>
+                                            <td>{{ contactPerson.contactPersonLanguage }}</td>
+                                            <td>{{ contactPerson.contactPersonGender }}</td>
+                                            <td>{{ contactPerson.address.addressLocality }}</td>
+                                            <td class="center">
+                                                <div class="visible-md visible-lg hidden-sm hidden-xs">
+                                                    <a class="btn btn-xs btn-teal tooltips editContact" data-placement="top" data-original-title="{{ 'edit'|trans }}"><i class="fa fa-edit"></i></a>
+                                                    <a class="btn btn-xs btn-bricky tooltips deleteContact" data-placement="top" data-original-title="{{ 'delete'|trans }}"><i class="fa fa-trash-o"></i></a>
+                                                </div>
+                                            </td>
+                                            <td class="hidden clientContactID">{{ contactPerson.id }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                {% endif %}
+                                </tbody>
+                            </table>
+                            <table class="buttonline col-md-12 ">
+                                <tbody>
+                                <tr>
+                                    <td align="left">
+                                        <button type="button" id="addContact" class="btn btn-default">{{ 'add' |trans }}</button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            {% include 'ToolsCustomBundle::modalRemove.html.twig' with {
+                                'modalID' : 'modalDeleteContact', 'title' : 'contact.people.title'|trans, 'message' : 'contact.people.remove.message'|trans, 'messageModalID' : 'messageModalContact'
+                            } %}
+                        </div>
+                        <div class="modal fade" tabindex="-1" data-width="760" style="display: none;" id="modalContact">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">{{ 'modal.contactPerson' | trans }}</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-12" id="contactData"></div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="javascript:void(0);" id="SaveContact" class="btn btn-primary">{{ 'save' | trans }}</a>
+                                <button type="button" class="btn btn-default"
+                                        data-dismiss="modal">{{ 'close' | trans }}</button>
+                            </div>
+                        </div><!-- /.modal -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>
+        <a href="{{ path('tic_platform_clients') }}" class="btn btn-default">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            {{ 'cancel' |trans }}
+        </a>
+    </p>
+
+{% endblock %}
+
+
+{% block js %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/bootstrap-modal/js/bootstrap-modal.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/bootstrap-modal/js/bootstrap-modalmanager.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/DataTables/jquery.dataTables.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/DataTables/dataTables.bootstrap.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/main.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/editClient.js") }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script type="text/javascript" src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+{% endblock %}

@@ -1,0 +1,65 @@
+<div class="form-group col-md-12">
+    {{ form_label(form.contactPersonFirstname ) }}
+    <div class="col-md-9">
+        {{ form_widget(form.contactPersonFirstname) }}
+    </div>
+    <div class="col-md-offset-3 col-md-9">
+        {{ form_errors(form.contactPersonFirstname) }}
+    </div>
+</div>
+<div class="form-group col-md-12">
+    {{ form_label(form.contactPersonLastname ) }}
+    <div class="col-md-9">
+        {{ form_widget(form.contactPersonLastname) }}
+    </div>
+    <div class="col-md-offset-3 col-md-9">
+        {{ form_errors(form.contactPersonLastname) }}
+    </div>
+</div>
+<div class="form-group col-md-12">
+    {{ form_label(form.contactPersonPhone ) }}
+    <div class="col-md-9">
+        {{ form_widget(form.contactPersonPhone) }}
+    </div>
+    <div class="col-md-offset-3 col-md-9">
+        {{ form_errors(form.contactPersonPhone) }}
+    </div>
+</div>
+<div class="form-group col-md-12">
+    {{ form_label(form.contactPersonmail ) }}
+    <div class="col-md-9">
+        {{ form_widget(form.contactPersonmail) }}
+    </div>
+    <div class="col-md-offset-3 col-md-9">
+        {{ form_errors(form.contactPersonmail) }}
+    </div>
+</div>
+<div class="form-group col-md-12">
+    {{ form_label(form.contactPersonFunction ) }}
+    <div class="col-md-9">
+        {{ form_widget(form.contactPersonFunction) }}
+    </div>
+    <div class="col-md-offset-3 col-md-9">
+        {{ form_errors(form.contactPersonFunction) }}
+    </div>
+</div>
+<div class="form-group col-md-12">
+    {{ form_label(form.contactPersonLanguage ) }}
+    <div class="col-md-9">
+        {{ form_widget(form.contactPersonLanguage) }}
+    </div>
+    <div class="col-md-offset-3 col-md-9">
+        {{ form_errors(form.contactPersonLanguage) }}
+    </div>
+</div>
+<div class="form-group col-md-12">
+    {{ form_label(form.contactPersonGender ) }}
+    <div class="col-md-9">
+        {{ form_widget(form.contactPersonGender) }}
+    </div>
+    <div class="col-md-offset-3 col-md-9">
+        {{ form_errors(form.contactPersonGender) }}
+    </div>
+</div>
+
+{% include "TICPlatformBundle:Addresses:form.html.twig" %}

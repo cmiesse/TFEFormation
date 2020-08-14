@@ -1,0 +1,54 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        {{ 'client.details' |trans }}
+    </div>
+    <div class="panel-body">
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+        <div class="row">
+            <div class="form-group col-md-12">
+                {{ form_label(form.clientName ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.clientName) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.clientName) }}
+                </div>
+            </div>
+
+            <div class="form-group col-md-12">
+                {{ form_label(form.clientAbbreviation ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.clientAbbreviation) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.clientAbbreviation) }}
+                </div>
+            </div>
+
+            <div class="form-group col-md-12">
+                {{ form_label(form.clientTVANumber ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.clientTVANumber) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.clientTVANumber) }}
+                </div>
+            </div>
+
+            <div class="form-group col-md-12">
+                {{ form_label(form.clientCategory ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.clientCategory) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.clientCategory) }}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-offset-9 col-md-3">
+            {{ form_widget(form.save) }}
+        </div>
+        {{ form_end(form) }}
+    </div>
+</div>

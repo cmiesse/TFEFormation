@@ -1,0 +1,81 @@
+{% extends "TICPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ 'countries'|trans }} - {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset("assets/clip-one/plugins/DataTables/dataTables.bootstrap.min.css") }}">
+    <link href="{{ asset("assets/clip-one/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css") }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset("assets/clip-one/plugins/bootstrap-modal/css/bootstrap-modal.css") }}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">{{ 'countries'|trans }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {{'country.list' | trans}}
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped table-bordered table-hover dataTable">
+                        <thead>
+                        <tr>
+                            <th>{{ 'country.name' | trans }}</th>
+                            <th>{{ 'actions' | trans }}</th>
+                            <th class="hidden"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% if items|length > 0 %}
+                            {% for item in items %}
+                                <tr>
+                                    <td>{{ item.countryName }}</td>
+                                    <td class="center">
+                                        <div class="visible-md visible-lg hidden-sm hidden-xs">
+                                            <a href="{{ path('tic_platform_main_country_edit', {'itemID':item.id}) }}" class="btn btn-xs btn-teal tooltips" data-placement="top" data-original-title="{{ 'edit'|trans }}"><i class="fa fa-edit"></i></a>
+                                            <a class="btn btn-xs btn-bricky tooltips deleteCountry" data-placement="top" data-original-title="{{ 'delete'|trans }}"><i class="fa fa-trash-o"></i></a>
+                                        </div>
+                                    </td>
+                                    <td class="hidden countryID">{{ item.id }}</td>
+                                </tr>
+                            {% endfor %}
+                        {% endif %}
+                        </tbody>
+                    </table>
+                    <table class="buttonline col-md-12 ">
+                        <tbody>
+                        <tr>
+                            <td align="left">
+                                <a href="{{ path('tic_platform_main_country_edit', {'itemID' : -1}) }}" class="btn btn-default">{{ 'add' | trans }}</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'ToolsCustomBundle::modalRemove.html.twig' with {
+        'modalID' : 'modalDeleteCountry', 'title' : 'country.title'|trans, 'message' : 'country.remove.message'|trans, 'messageModalID' : 'messageModal'
+    } %}
+
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/bootstrap-modal/js/bootstrap-modal.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/bootstrap-modal/js/bootstrap-modalmanager.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/DataTables/jquery.dataTables.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/DataTables/dataTables.bootstrap.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/main.js") }}"> </script>
+    <script type="text/javascript" src="{{ asset("js/Country.js") }}"> </script>
+    <script type="text/javascript" src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script type="text/javascript" src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+{% endblock %}

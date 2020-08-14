@@ -1,0 +1,183 @@
+tic_platform_main_tool_index:
+    path:     /parameters/tools
+    defaults:
+        _controller: TICPlatformBundle:Tool:index
+    methods: [ GET ]
+
+tic_platform_main_tool_edit:
+    path:     /parameters/tools/{itemID}
+    defaults:
+        _controller: TICPlatformBundle:Tool:edit
+    requirements:
+        itemID: \d*|-1
+
+tic_platform_main_tool_remove:
+    path:     /parameters/tools/{itemID}/remove
+    defaults:
+        _controller: TICPlatformBundle:Tool:remove
+    requirements:
+        itemID: \d*
+    methods: [ GET ]
+    options:
+        expose: true
+
+tic_platform_main_editor_index:
+    path:     /parameters/editors
+    defaults:
+        _controller: TICPlatformBundle:Editor:index
+    methods: [ GET ]
+
+tic_platform_main_editor_edit:
+    path:     /parameters/editors/{itemID}
+    defaults:
+        _controller: TICPlatformBundle:Editor:edit
+    requirements:
+        itemID: \d*|-1
+
+tic_platform_main_editor_remove:
+    path:     /parameters/editors/{itemID}/remove
+    defaults:
+        _controller: TICPlatformBundle:Editor:remove
+    requirements:
+        itemID: \d*
+    methods: [ GET ]
+    options:
+        expose: true
+
+tic_platform_main_language_index:
+    path:     /parameters/languages
+    defaults:
+        _controller: TICPlatformBundle:Language:index
+    methods: [ GET ]
+
+tic_platform_main_language_edit:
+    path:     /parameters/languages/{itemID}
+    defaults:
+        _controller: TICPlatformBundle:Language:edit
+    requirements:
+        itemID: \d*|-1
+
+tic_platform_main_language_remove:
+    path:     /parameters/languages/{itemID}/remove
+    defaults:
+        _controller: TICPlatformBundle:Language:remove
+    requirements:
+        itemID: \d*
+    methods: [ GET ]
+    options:
+        expose: true
+
+tic_platform_main_country_index:
+    path:     /parameters/countries
+    defaults:
+        _controller: TICPlatformBundle:Country:index
+    methods: [ GET ]
+
+tic_platform_main_country_edit:
+    path:     /parameters/countries/{itemID}
+    defaults:
+        _controller: TICPlatformBundle:Country:edit
+    requirements:
+        itemID: \d*|-1
+
+tic_platform_main_country_remove:
+    path:     /parameters/countries/{itemID}/remove
+    defaults:
+        _controller: TICPlatformBundle:Country:remove
+    requirements:
+        itemID: \d*
+    methods: [ GET ]
+    options:
+        expose: true
+
+tic_platform_main_employer_index:
+    path:     /parameters/employers
+    defaults:
+        _controller: TICPlatformBundle:Employer:index
+    methods: [ GET ]
+
+tic_platform_main_employer_edit:
+    path:     /parameters/employers/{itemID}
+    defaults:
+        _controller: TICPlatformBundle:Employer:edit
+    requirements:
+        itemID: \d*|-1
+
+tic_platform_main_employer_remove:
+    path:     /parameters/employers/{itemID}/remove
+    defaults:
+        _controller: TICPlatformBundle:Employer:remove
+    requirements:
+        itemID: \d*
+    methods: [ GET ]
+    options:
+        expose: true
+
+tic_platform_main_client_category_index:
+    path:     /parameters/clientsCategories
+    defaults:
+        _controller: TICPlatformBundle:ClientCategory:index
+    methods: [ GET ]
+
+tic_platform_main_client_category_edit:
+    path:     /parameters/clientsCategories/{itemID}
+    defaults:
+        _controller: TICPlatformBundle:ClientCategory:edit
+    requirements:
+        itemID: \d*|-1
+
+tic_platform_main_client_category_remove:
+    path:     /parameters/clientsCategories/{itemID}/remove
+    defaults:
+        _controller: TICPlatformBundle:ClientCategory:remove
+    requirements:
+        itemID: \d*
+    methods: [ GET ]
+    options:
+        expose: true
+
+tic_platform_main_facturation_mode_index:
+    path:     /parameters/facturation_mode
+    defaults:
+        _controller: TICPlatformBundle:FacturationMode:index
+    methods: [ GET ]
+
+tic_platform_main_facturation_mode_edit:
+    path:     /parameters/facturation_mode/{itemID}
+    defaults:
+        _controller: TICPlatformBundle:FacturationMode:edit
+    requirements:
+        itemID: \d*|-1
+
+tic_platform_main_facturation_mode_remove:
+    path:     /parameters/facturation_mode/{itemID}/remove
+    defaults:
+        _controller: TICPlatformBundle:FacturationMode:remove
+    requirements:
+        itemID: \d*
+    methods: [ GET ]
+    options:
+        expose: true
+
+tic_platform_main_performance_type_index:
+    path:     /parameters/performance_type
+    defaults:
+        _controller: TICPlatformBundle:PerformanceType:index
+    methods: [ GET ]
+
+tic_platform_main_performance_type_edit:
+    path:     /parameters/performance_type/{itemID}
+    defaults:
+        _controller: TICPlatformBundle:PerformanceType:edit
+    requirements:
+        itemID: \d*|-1
+
+tic_platform_main_performance_type_remove:
+    path:     /parameters/performance_type/{itemID}/remove
+    defaults:
+        _controller: TICPlatformBundle:PerformanceType:remove
+    requirements:
+        itemID: \d*
+    methods: [ GET ]
+    options:
+        expose: true

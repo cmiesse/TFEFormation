@@ -1,0 +1,30 @@
+{% extends "TICPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ 'contracts'|trans }} - {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset("assets/clip-one/plugins/bootstrap-datepicker-1.6.0/dist/css/bootstrap-datepicker.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/clip-one/plugins/select2/select2.css") }}">
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">{{ 'client.contract.new' |trans }}</h1>
+        </div>
+    </div>
+    {% include "TICPlatformBundle:Contracts:form.html.twig" %}
+    {% include "TICPlatformBundle:Common:cancel.html.twig" with {'route' : path('tic_platform_contracts',  {'id': id})} %}
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/bootstrap-datepicker-1.6.0/dist/js/bootstrap-datepicker.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/bootstrap-datepicker-1.6.0/dist/locales/bootstrap-datepicker.fr.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/select2/select2.min.js") }}"></script>
+    <script src="{{ asset("js/main.js") }}"> </script>
+    <script src="{{ asset("js/editContract.js") }}"> </script>
+{% endblock %}

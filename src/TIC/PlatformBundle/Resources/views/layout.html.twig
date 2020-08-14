@@ -1,0 +1,101 @@
+{% extends "::base.html.twig" %}
+{% block stylesheets %}
+{% endblock %}
+{% block body %}
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <!-- start: TOP NAVIGATION CONTAINER -->
+        <div class="container">
+            <div class="navbar-header">
+                <!-- start: RESPONSIVE MENU TOGGLER -->
+                <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                    <span class="clip-list-2"></span>
+                </button>
+                <!-- end: RESPONSIVE MENU TOGGLER -->
+                <!-- start: LOGO -->
+                <a class="navbar-brand" href="{{ path('tic_platform_main_dispatch') }}">Bstorm</a>
+                <!-- end: LOGO -->
+            </div>
+            <div class="navbar-tools">
+                <!-- start: TOP NAVIGATION MENU -->
+                <ul class="nav navbar-right">
+                    <!-- start: USER DROPDOWN -->
+                    <li class="dropdown current-user">
+                        <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
+                            <i class="fa fa-user"></i>&nbsp;
+                            <span class="username">{{ app.user.email }}</span>
+                            <i class="clip-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            {% if is_granted('ROLE_PREVIOUS_ADMIN') %}
+                                <li>
+                                    <a href="{{ path('tic_platform_main_validate_form_toggle') }}">
+                                        <i class="clip-checkmark-2 text-{% if app.session.get('validate_form') %}danger{% else %}success{% endif %}"></i>
+                                        &nbsp;{{ 'validate.form'|trans }}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('tic_platform_main_dispatch', {'_switch_user' : '_exit'}) }}">
+                                        <i class="clip-switch"></i>
+                                        &nbsp;{{ 'switch'|trans }}
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                            {% endif %}
+                            <li>
+                                <a href="{{ path('fos_user_change_password') }}">
+                                    <i class="clip-user-2"></i>
+                                    &nbsp;{{ 'password.change'|trans }}
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="{{ path('fos_user_security_logout') }}">
+                                    <i class="clip-exit"></i>
+                                    &nbsp;{{ 'logout'|trans }}
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- end: USER DROPDOWN -->
+                </ul>
+                <!-- end: TOP NAVIGATION MENU -->
+            </div>
+        </div>
+        <!-- end: TOP NAVIGATION CONTAINER -->
+    </div>
+    <div class="main-container">
+        <div class="navbar-content">
+            <div class="main-navigation navbar-collapse collapse">
+                <div class="navigation-toggler">
+                    <i class="clip-chevron-left"></i>
+                    <i class="clip-chevron-right"></i>
+                </div>
+                {{ knp_menu_render('sidebar') }}
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" style="padding-bottom: 1.5em;">
+                        {% block breadcrump %}
+                            {{ wo_render_breadcrumbs() }}
+                        {% endblock %}
+                    </div>
+                </div>
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+    <div class="footer clearfix">
+        <div class="footer-inner">Version 0.0.8</div>
+        <div class="footer-items">
+        <span class="go-top">
+            <i class="clip-chevron-up"></i>
+        </span>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+{% endblock %}
+
