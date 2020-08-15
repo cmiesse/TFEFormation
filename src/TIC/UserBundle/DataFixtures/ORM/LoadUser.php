@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Dorian
- * Date: 11/05/2016
- * Time: 16:11
- */
 
 namespace TIC\UserBundle\DataFixtures\ORM;
 
@@ -13,7 +7,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use TIC\UserBundle\Entity\User;
 
 
-class LoadTools implements FixtureInterface
+class LoadUser implements FixtureInterface
 {
     public function load(ObjectManager $manager)
     {

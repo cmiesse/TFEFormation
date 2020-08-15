@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Dorian
- * Date: 29/04/2016
- * Time: 10:50
- */
 
 namespace TIC\PlatformBundle\DataFixtures\ORM;
 
