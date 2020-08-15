@@ -1,0 +1,347 @@
+{{ form_start(form) }}
+{{ form_errors(form) }}
+<div class="col-md-6">
+    <div class="form-group col-md-12">
+        {{ form_label(form.trainerFirstname ) }}
+        <div class="col-md-9">
+            {{ form_widget(form.trainerFirstname) }}
+        </div>
+        <div class="col-md-offset-3 col-md-9">
+            {{ form_errors(form.trainerFirstname) }}
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        {{ form_label(form.trainerLastname ) }}
+        <div class="col-md-9">
+            {{ form_widget(form.trainerLastname) }}
+        </div>
+        <div class="col-md-offset-3 col-md-9">
+            {{ form_errors(form.trainerLastname) }}
+        </div>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="form-group col-md-12">
+        {{ form_label(form.trainerGSM ) }}
+        <div class="col-md-9">
+            {{ form_widget(form.trainerGSM) }}
+        </div>
+        <div class="col-md-offset-3 col-md-9">
+            {{ form_errors(form.trainerGSM) }}
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        {{ form_label(form.trainerBirthdate ) }}
+        <div class="col-md-9">
+            {{ form_widget(form.trainerBirthdate) }}
+        </div>
+        <div class="col-md-offset-3 col-md-9">
+            {{ form_errors(form.trainerBirthdate) }}
+        </div>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="form-group col-md-12">
+        {{ form_label(form.trainerIdentityCardNumber ) }}
+        <div class="col-md-9">
+            {{ form_widget(form.trainerIdentityCardNumber) }}
+        </div>
+        <div class="col-md-offset-4 col-md-8">
+            {{ form_errors(form.trainerIdentityCardNumber) }}
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        {{ form_label(form.trainerIdentityCardValidity) }}
+        <div class="col-md-9">
+            {{ form_widget(form.trainerIdentityCardValidity) }}
+        </div>
+        <div class="col-md-offset-3 col-md-9">
+            {{ form_errors(form.trainerIdentityCardValidity) }}
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        {{ form_label(form.documentsIdentityCard.file) }}
+        <div class="col-md-9">
+            {{ form_widget(form.documentsIdentityCard.file) }}
+        </div>
+        {% if trainer is defined and trainer.documentsIdentityCard|length > 0 %}
+            <div class="col-md-offset-3 col-md-9">
+                <ul style="list-style: none;">
+                    {% for document in trainer.documentsIdentityCard %}
+                        <li style="padding-top: 3px;">
+                            <a href="javascript:void(0);" class="btn btn-danger btn-xs removeDocument" data-trainerID="{{ trainer.id }}" data-documentType="ID" data-id="{{ document.documentID }}">x</a>
+                            <a href="{{ path('tic_platform_main_download_file', {'docType' : 'ID', 'documentID' : document.documentID}) }}" data-documentType="ID" target="_blank">{{ document.documentOriginalName }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        <div class="col-md-offset-3 col-md-9">
+            {{ form_errors(form.documentsIdentityCard.file) }}
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        {{ form_label(form.trainerSelfEmployed ) }}
+        <div class="col-md-8">
+            {{ form_widget(form.trainerSelfEmployed) }}
+        </div>
+        <div class="col-md-offset-4 col-md-8">
+            {{ form_errors(form.trainerSelfEmployed) }}
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        {{ form_label(form.employer) }}
+        <div class="col-md-9">
+            {{ form_widget(form.employer) }}
+        </div>
+        <div class="col-md-offset-3 col-md-9">
+            {{ form_errors(form.employer) }}
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        {{ form_label(form.trainerTVANumber ) }}
+        <div class="col-md-9">
+            {{ form_widget(form.trainerTVANumber) }}
+        </div>
+        <div class="col-md-offset-3 col-md-9">
+            {{ form_errors(form.trainerTVANumber) }}
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        {{ form_label(form.trainerDayCost ) }}
+        <div class="col-md-9">
+            {{ form_widget(form.trainerDayCost) }}
+        </div>
+        <div class="col-md-offset-3 col-md-9">
+            {{ form_errors(form.trainerDayCost) }}
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        {{ form_label(form.trainerKilometreRates ) }}
+        <div class="col-md-9">
+            {{ form_widget(form.trainerKilometreRates) }}
+        </div>
+        <div class="col-md-offset-3 col-md-9">
+            {{ form_errors(form.trainerKilometreRates) }}
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="form-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {{ 'trainer.cv' |trans }}
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            {{ form_label(form.documentCv.file) }}
+                            <div class="col-md-9">
+                                {{ form_widget(form.documentCv.file) }}
+                            </div>
+                            {% if trainer is defined and trainer.documentCv != null %}
+                                <div class="col-md-offset-3 col-md-9">
+                                    <ul style="list-style: none;">
+                                        <li>
+                                            <a href="javascript:void(0);" class="btn btn-danger btn-xs removeDocument" data-trainerID="{{ trainer.id }}" data-documentType="CV" data-id="{{ trainer.documentCv.documentID }}" style="padding-top: 3px;">x</a>
+                                            <a href="{{ path('tic_platform_main_download_file', {'docType' : 'CV', 'documentID' : trainer.documentCv.documentID}) }}" target="_blank">{{ trainer.documentCv.documentOriginalName }}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            {% endif %}
+                            <div class="col-md-offset-3 col-md-9">
+                                {{ form_errors(form.documentCv.file) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                {{ 'car' |trans }}
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        {{ form_label(form.trainerNumberPlate ) }}
+                        <div class="col-md-8">
+                            {{ form_widget(form.trainerNumberPlate) }}
+                        </div>
+                        <div class="col-md-offset-3 col-md-8">
+                            {{ form_errors(form.trainerNumberPlate) }}
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        {{ form_label(form.trainerCarModel ) }}
+                        <div class="col-md-8">
+                            {{ form_widget(form.trainerCarModel) }}
+                        </div>
+                        <div class="col-md-offset-3 col-md-8">
+                            {{ form_errors(form.trainerCarModel) }}
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        {{ form_label(form.trainerCarColor ) }}
+                        <div class="col-md-8">
+                            {{ form_widget(form.trainerCarColor) }}
+                        </div>
+                        <div class="col-md-offset-3 col-md-8">
+                            {{ form_errors(form.trainerCarColor) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                {{ 'calendar'|trans }}
+            </div>
+            <div class="panel-body">
+                <div class="form-group col-md-12">
+                    {{ form_label(form.trainerCalendarID) }}
+                    <div class="col-md-9">
+                        {{ form_widget(form.trainerCalendarID) }}
+                    </div>
+                    <div class="col-md-offset-3 col-md-9">
+                        {{ form_errors(form.trainerCalendarID) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        {{ form_label(form.trainerActive) }}
+        <div class="col-md-9">
+            {{ form_widget(form.trainerActive) }}
+        </div>
+        <div class="col-md-offset-3 col-md-9">
+            {{ form_errors(form.trainerActive) }}
+        </div>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                {{ 'Mails' |trans }}
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        {{ form_label(form.trainerBstormMail ) }}
+                        <div class="col-md-8">
+                            {{ form_widget(form.trainerBstormMail) }}
+                        </div>
+                        <div class="col-md-offset-3 col-md-8">
+                            {{ form_errors(form.trainerBstormMail) }}
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        {{ form_label(form.trainerPersonalMail ) }}
+                        <div class="col-md-8">
+                            {{ form_widget(form.trainerPersonalMail) }}
+                        </div>
+                        <div class="col-md-offset-3 col-md-8">
+                            {{ form_errors(form.trainerPersonalMail) }}
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        {{ form_label(form.trainerClientMail ) }}
+                        <div class="col-md-8">
+                            {{ form_widget(form.trainerClientMail) }}
+                        </div>
+                        <div class="col-md-offset-3 col-md-8">
+                            {{ form_errors(form.trainerClientMail) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        {{ form_label(form.trainerFirstDay ) }}
+        <div class="col-md-9">
+            {{ form_widget(form.trainerFirstDay) }}
+        </div>
+        <div class="col-md-offset-4 col-md-8">
+            {{ form_errors(form.trainerFirstDay) }}
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        {{ form_label(form.languages ) }}
+        <div class="col-md-9">
+            {{ form_widget(form.languages) }}
+        </div>
+        <div class="col-md-offset-3 col-md-9">
+            {{ form_errors(form.languages) }}
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        {{ form_label(form.trainerNationality ) }}
+        <div class="col-md-9">
+            {{ form_widget(form.trainerNationality) }}
+        </div>
+        <div class="col-md-offset-3 col-md-9">
+            {{ form_errors(form.trainerNationality) }}
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        {{ form_label(form.Country ) }}
+        <div class="col-md-9">
+            {{ form_widget(form.Country) }}
+        </div>
+        <div class="col-md-offset-3 col-md-9">
+            {{ form_errors(form.Country) }}
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                {{ 'address' |trans }}
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    {% include "TICPlatformBundle:Addresses:form.html.twig" %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                {{ 'color'|trans }}
+            </div>
+            <div class="panel-body">
+                <div class="form-group col-md-12">
+                    {{ form_label(form.trainerColor) }}
+                    <div class="col-md-9">
+                        {{ form_widget(form.trainerColor) }}
+                    </div>
+                    <div class="col-md-offset-3 col-md-9">
+                        {{ form_errors(form.trainerColor) }}
+                    </div>
+                </div>
+                <div class="form-group col-md-12">
+                    {{ form_label(form.trainerTextColor) }}
+                    <div class="col-md-9">
+                        {{ form_widget(form.trainerTextColor) }}
+                    </div>
+                    <div class="col-md-offset-3 col-md-9">
+                        {{ form_errors(form.trainerTextColor) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-3 col-md-offset-9">
+        {{ form_widget(form.save) }}
+    </div>
+</div>
+{{ form(form) }}
+{{ form_end(form) }}

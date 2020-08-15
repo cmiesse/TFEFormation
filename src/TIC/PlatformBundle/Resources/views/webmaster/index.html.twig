@@ -1,0 +1,65 @@
+{% extends "TICPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ parent() }} - {{ 'webmaster'|trans }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset("assets/clip-one/plugins/DataTables/dataTables.bootstrap.min.css") }}">
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">{{ 'users' | trans }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {{'user.list' | trans}}
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped table-bordered table-hover dataTable">
+                        <thead>
+                            <tr>
+                                <td>{{ 'email'|trans }}</td>
+                                <td>{{ 'role'|trans }}</td>
+                                <td>{{ 'last.login'|trans }}</td>
+                                <td>{{ 'actions'|trans }}</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if users|length > 0 %}
+                                {% for user in users %}
+                                    <tr>
+                                        <td>{{ user.email }}</td>
+                                        <td>{% if user.hasRole("ROLE_ADMIN") %}Admin{% else %}User{% endif %}</td>
+                                        <td>{{ user.lastLogin|date("d-m-Y H:i:s") }}</td>
+                                        <td class="center">
+                                            {% if user != app.user %}
+                                                <div>
+                                                    <a href="{{ path('tic_platform_main_dispatch', {'_switch_user' : user.email}) }}" class="btn btn-xs btn-teal tooltips" data-placement="top"
+                                                       data-original-title="{{ 'use'|trans }}"><i class="fa fa-user"></i></a>
+                                                </div>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/DataTables/jquery.dataTables.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/DataTables/dataTables.bootstrap.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/main.js") }}"> </script>
+{% endblock %}

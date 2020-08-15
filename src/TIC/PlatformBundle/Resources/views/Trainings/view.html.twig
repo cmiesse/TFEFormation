@@ -1,0 +1,88 @@
+{% extends "TICPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ 'trainings'|trans }} - {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset("assets/clip-one/plugins/DataTables/dataTables.bootstrap.min.css") }}">
+    <link href="{{ asset("assets/clip-one/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css") }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset("assets/clip-one/plugins/bootstrap-modal/css/bootstrap-modal.css") }}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">{{ 'trainings' | trans }}</h1>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            {{'training.list' | trans}}
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-striped table-bordered table-hover dataTable">
+                        <thead>
+                        <tr>
+                            <th>{{ 'training.name' | trans }}</th>
+                            <th>{{ 'training.link'| trans }}</th>
+                            <th>{{ 'training.tools' | trans }}</th>
+                            <th>{{ 'actions' | trans }}</th>
+                            <th class="hidden"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% if trainings|length > 0 %}
+                            {% for training in trainings %}
+                                <tr>
+                                    <td>{{ training.trainingName }}</td>
+                                    <td>{% if training.trainingLink != null %}<a href="{{ training.trainingLink }}" target="_blank">{{ training.trainingLink }}</a>{% endif %}</td>
+                                    <td>{% for tool in training.tools %}
+                                        {{ tool.toolName }}<br>
+                                    {% endfor %}
+                                    </td>
+                                    <td class="center">
+                                        <div class="visible-md visible-lg hidden-sm hidden-xs">
+                                            <a href="{{ path('tic_platform_trainings_edit', {'id':training.id}) }}" class="btn btn-xs btn-teal tooltips" data-placement="top" data-original-title="{{ 'edit'|trans }}"><i class="fa fa-edit"></i></a>
+                                            <a class="btn btn-xs btn-bricky tooltips deleteTraining" data-placement="top" data-original-title="{{ 'delete'|trans }}"><i class="fa fa-trash-o"></i></a>
+                                        </div>
+                                    </td>
+                                    <td class="hidden trainingID">{{ training.id }}</td>
+                                </tr>
+                            {% endfor %}
+                        {% endif %}
+                        </tbody>
+                    </table>
+                    <table class="buttonline col-md-12 ">
+                        <tbody>
+                            <tr>
+                                <td align="left">
+                                    <a href="{{ path('tic_platform_trainings_add') }}" class="btn btn-default">{{ 'add' | trans }}</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'ToolsCustomBundle::modalRemove.html.twig' with {
+        'modalID' : 'modalDeleteTraining', 'title' : 'training.title'|trans, 'message' : 'training.remove.message'|trans, 'messageModalID' : 'messageModal'
+    } %}
+
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/bootstrap-modal/js/bootstrap-modal.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/bootstrap-modal/js/bootstrap-modalmanager.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/DataTables/jquery.dataTables.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/DataTables/dataTables.bootstrap.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/main.js") }}"> </script>
+    <script type="text/javascript" src="{{ asset("js/Training.js") }}"> </script>
+    <script type="text/javascript" src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script type="text/javascript" src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+{% endblock %}

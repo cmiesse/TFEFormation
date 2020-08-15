@@ -1,0 +1,53 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        {{ 'trainings.details' |trans }}
+    </div>
+    <div class="panel-body">
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+        <div class="row">
+            <div class="form-group col-md-12">
+                {{ form_label(form.trainingName ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.trainingName) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.trainingName) }}
+                </div>
+            </div>
+
+            <div class="form-group col-md-12">
+                {{ form_label(form.trainingLink ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.trainingLink) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.trainingLink) }}
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                {{ form_label(form.tools ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.tools) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.tools) }}
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                {{ form_label(form.trainingActive) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.trainingActive) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.trainingActive) }}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-md-offset-9">
+            {{ form_widget(form.save) }}
+        </div>
+        {{ form_end(form) }}
+    </div>
+</div>
+

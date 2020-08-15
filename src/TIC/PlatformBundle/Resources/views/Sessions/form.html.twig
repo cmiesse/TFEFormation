@@ -1,0 +1,88 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        {{ 'session.details' |trans }}
+    </div>
+    <div class="panel-body">
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+        <div class="row">
+            <div class="form-group col-md-12">
+                {{ form_label(form.contract ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.contract) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.contract) }}
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                {{ form_label(form.address ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.address) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.address) }}
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                {{ form_label(form.sessionDailyAmount ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.sessionDailyAmount) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.sessionDailyAmount) }}
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                {{ form_label(form.sessionNumberOfDays) }}
+                <div class="col-md-3">
+                    {{ form_widget(form.sessionNumberOfDays) }}
+                </div>
+                <div class="col-md-offset-3 col-md-3">
+                    {{ form_errors(form.sessionNumberOfDays) }}
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                {{ form_label(form.training ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.training) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.training) }}
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                {{ form_label(form.language ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.language) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.language) }}
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                {{ form_label(form.trainer ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.trainer) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.trainer) }}
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                {{ form_label(form.PerformanceType ) }}
+                <div class="col-md-9">
+                    {{ form_widget(form.PerformanceType) }}
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    {{ form_errors(form.PerformanceType) }}
+                </div>
+            </div>
+            {% include "TICPlatformBundle:RangeDates:form.html.twig" %}
+        </div>
+        <div class="col-md-3 col-md-offset-9">
+            {{ form_widget(form.save) }}
+        </div>
+        {{ form_end(form) }}
+    </div>
+</div>

@@ -1,0 +1,73 @@
+{% extends "TICPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ parent() }} - {{ 'webmaster'|trans }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset("assets/clip-one/plugins/DataTables/dataTables.bootstrap.min.css") }}">
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">{{ 'calendars' | trans }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {{'calendar.list' | trans}}
+                </div>
+                <div class="panel-body">
+                    {{ form_start(form) }}
+                    <div class="col-md-12" style="margin-bottom: 15px;">
+                        {{ form_rest(form) }}
+                    </div>
+                    {{ form_end(form) }}
+                    <table class="table table-striped table-bordered table-hover dataTable">
+                        <thead>
+                            <tr>
+                                <th>{{ 'name'|trans }}</th>
+                                <th>{{ 'actions'|trans }}</th>
+                                <th class="hidden"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if trainers|length > 0 %}
+                                {% for trainer in trainers %}
+                                    <tr>
+                                        <td>{{ trainer }}</td>
+                                        <td class="center">
+                                            {% if trainer.trainerCalendarID != null %}
+                                                <div>
+                                                    <a href="javascript:void(0);" class="btn btn-xs btn-teal tooltips resetCalendar" data-placement="top"
+                                                       data-original-title="{{ 'reset'|trans }}">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </a>
+                                                </div>
+                                            {% endif %}
+                                        </td>
+                                        <td class="hidden trainerID">{{ trainer.id }}</td>
+                                    </tr>
+                                {% endfor %}
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/DataTables/jquery.dataTables.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/DataTables/dataTables.bootstrap.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/main.js") }}"> </script>
+    <script type="text/javascript" src="{{ asset("js/calendar.js") }}"> </script>
+    <script type="text/javascript" src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script type="text/javascript" src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+{% endblock %}

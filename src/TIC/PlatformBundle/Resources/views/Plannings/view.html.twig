@@ -1,0 +1,115 @@
+{% extends "TICPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ 'planning'|trans }} - {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset("assets/clip-one/plugins/select2/select2.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/dhtmlxScheduler/codebase/dhtmlxscheduler.css") }}" type="text/css">
+    <link href="{{ asset("assets/clip-one/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css") }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset("assets/clip-one/plugins/bootstrap-modal/css/bootstrap-modal.css") }}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+    <div class="hidden" id="sessionID">{% if session is defined %}{{ session.id }}{% else %}-1{% endif %}</div>
+    <div class="hidden" id="sessionNumberOfDays">{% if session is defined %}{{ session.sessionNumberOfDays }}{% else %}-1{% endif %}</div>
+    <div class="hidden" id="countDays">{% if COUNT is defined %}{{ COUNT }}{% endif %}</div>
+    {% if clientName is defined %}
+        <div class="hidden" id="clientName">{{ clientName }}</div>
+    {% endif %}
+    {% if formationName is defined %}
+        <div class="hidden" id="formationName">{{ formationName }}</div>
+    {% endif %}
+    {% if formationLanguage is defined %}
+        <div class="hidden" id="formationLanguage">{{ formationLanguage }}</div>
+    {% endif %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">{{ 'planning' |trans }}{% if formationName is defined %} - {{ formationName }}{% endif %}</h1>
+        </div>
+        <!-- /.col-md-12 -->
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <select name="trainer" class="form-control search-select" multiple="multiple">
+                    {% if trainers is defined %}
+                        {% for trainer in trainers %}
+                            <option value="{{ trainer.id }}" {% if showAllDefault is defined and showAllDefault %}selected{% endif %}>{{ trainer.__toString }}</option>
+                        {% endfor %}
+                    {% elseif session is defined %}
+                        {% for trainer in session.trainer %}
+                            <option value="{{ trainer.id }}" {% if showAllDefault is defined and showAllDefault %}selected{% endif %}>{{ trainer.__toString }}</option>
+                        {% endfor %}
+                    {% endif %}
+                    </select>
+                </div>
+                <div class="col-md-12" id="showMaxError">
+                    <div class="alert alert-dismissible alert-warning">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>{{ 'number.days.max.reached'|trans }}</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="scheduler_here" class="dhx_cal_container" style='width:100%; height:100%; padding:50%;'>
+                        <div class="dhx_cal_navline">
+                            <div class="dhx_cal_prev_button">&nbsp;</div>
+                            <div class="dhx_cal_next_button">&nbsp;</div>
+                            <div class="dhx_cal_today_button"></div>
+                            <div class="dhx_cal_date"></div>
+                            <div class="dhx_cal_tab" name="day_tab" style="right:204px;"></div>
+                            <div class="dhx_cal_tab" name="week_tab" style="right:140px;"></div>
+                            <div class="dhx_cal_tab" name="month_tab" style="right:76px;"></div>
+                        </div>
+                        <div class="dhx_cal_header"></div>
+                        <div class="dhx_cal_data"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalError" class="modal fade" tabindex="-1" data-width="760" style="display: none;">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                &times;
+            </button>
+            <h4 class="modal-title">{{ 'error'|trans }}</h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-dismissible alert-danger">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>{{ 'number.days.max.error'|trans }}</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-primary">
+                {{ 'close'|trans }}
+            </button>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/bootstrap-modal/js/bootstrap-modal.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/bootstrap-modal/js/bootstrap-modalmanager.js") }}"></script>
+    <script src="{{ asset("assets/dhtmlxScheduler/codebase/dhtmlxscheduler.js") }}" type="text/javascript"></script>
+    <script type="text/javascript" src="{{ asset("assets/clip-one/plugins/select2/select2.min.js") }}"></script>
+    <script src="{{ asset("assets/dhtmlxScheduler/codebase/ext/dhtmlxscheduler_editors.js") }}"></script>
+    <script src="{{ asset("assets/dhtmlxScheduler/codebase/ext/dhtmlxscheduler_limit.js") }}"></script>
+    <script src="{{ asset("assets/dhtmlxScheduler/codebase/ext/dhtmlxscheduler_readonly.js") }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/Planning.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script type="text/javascript" src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+{% endblock %}
