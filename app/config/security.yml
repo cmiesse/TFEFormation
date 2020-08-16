@@ -1,0 +1,37 @@
+security:
+    encoders:
+        FOS\UserBundle\Model\UserInterface: sha512
+
+    providers:
+        fos_userbundle:
+            id: fos_user.user_provider.username_email
+
+    firewalls:
+        main:
+            pattern:   ^/
+            anonymous: true
+            form_login:
+                default_target_path: tic_platform_main_dispatch
+                always_use_default_target_path: true
+                login_path: fos_user_security_login
+                check_path: fos_user_security_check
+                provider: fos_userbundle
+                csrf_provider: security.csrf.token_manager # Use form.csrf_provider instead for Symfony <2.4
+            logout:
+                path:   fos_user_security_logout
+                target: tic_platform_main_dispatch
+            remember_me:
+                key: "%secret%"
+                path: /
+            switch_user: { role: ROLE_SUPER_ADMIN }
+
+    access_control:
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/request, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/send-email, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/reset, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/check-email, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/webmaster_action/, role: ROLE_PREVIOUS_ADMIN }
+        - { path: ^/webmaster, role: ROLE_SUPER_ADMIN }
+        - { path: ^/users*, role: ROLE_ADMIN }
+        - { path: ^/, role: ROLE_USER }
