@@ -1,0 +1,25 @@
+{% extends "::base.html.twig" %}
+
+{% block classBody %}
+    login
+{% endblock %}
+
+{% block body %}
+<div class="main-login col-md-4 col-md-offset-4">
+    <div class="logo">bstorm
+    </div>
+    <div class="box-login">
+        {% block fos_user_content %}
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script src="{{ asset("assets/clip-one/plugins/jquery-validation/dist/jquery.validate.min.js") }}"></script>
+    <script src="{{ asset("assets/clip-one/js/login.js") }}"></script>
+    <script>
+        Login.init();
+    </script>
+{% endblock %}
