@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>{% block title %}bstorm{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+        <link rel="stylesheet" href="{{ asset("assets/clip-one/plugins/bootstrap/css/bootstrap.min.css") }}">
+        <link rel="stylesheet" href="{{ asset("assets/clip-one/plugins/font-awesome/css/font-awesome.min.css") }}">
+        <link rel="stylesheet" href="{{ asset("assets/clip-one/fonts/style.css") }}">
+        <link rel="stylesheet" href="{{ asset("assets/clip-one/css/main.css") }}">
+        <link rel="stylesheet" href="{{ asset("assets/clip-one/css/main-responsive.css") }}">
+        <link rel="stylesheet" href="{{ asset("assets/clip-one/plugins/iCheck/skins/all.css") }}">
+        <link rel="stylesheet" href="{{ asset("assets/clip-one/plugins/perfect-scrollbar/min/perfect-scrollbar.min.css") }}">
+        <link rel="stylesheet" href="{{ asset("assets/clip-one/css/theme_light.css") }}" type="text/css" id="skin_color">
+        {#<link rel="stylesheet" href="{{ asset("assets/clip-one/css/print.css") }}" type="text/css" media="print"/>#}
+        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+    </head>
+    <body class="{% block classBody %}{% endblock %}">
+        {#<div class="hidden" id="linkWaiting">{{ (asset('image/loading.gif')) }}</div>#}
+        {% block body %}
+        {% endblock %}
+    </body>
+    <script src="{{ asset("assets/clip-one/plugins/jQuery-lib/2.0.3/jquery.min.js") }}"></script>
+    <script src="{{ asset("assets/clip-one/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js") }}"></script>
+    <script src="{{ asset("assets/clip-one/plugins/bootstrap/js/bootstrap.min.js") }}"></script>
+    <script src="{{ asset("assets/clip-one/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js") }}"></script>
+    <script src="{{ asset("assets/clip-one/plugins/iCheck/jquery.icheck.min.js") }}"></script>
+    <script src="{{ asset("assets/clip-one/plugins/perfect-scrollbar/min/perfect-scrollbar.with-mousewheel.min.js") }}"></script>
+    <script src="{{ asset("assets/clip-one/js/main.js") }}"></script>
+    <script>
+        jQuery(document).ready(function() {
+            Main.init();
+        } );
+    </script>
+    {% block js %}
+    {% endblock %}
+    {% if app.environment == "dev" and app.session.get('validate_form') and is_granted('ROLE_PREVIOUS_ADMIN') %}
+        <script>
+            $('form').attr('novalidate', true);
+        </script>
+    {% endif %}
+</html>

@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2016-05-23T16:50:55Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="4e7afebcfbae000b22c7c85e5560f89a2a0280b4" resname="Admin">
+        <source>Admin</source>
+        <target>Admin</target>
+        <jms:reference-file line="61">UserBundle/Form/UserType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8d79d3a8035588bb348c953cfc1b5372fff1c913" resname="Mails">
+        <source>Mails</source>
+        <target>Mails</target>
+        <jms:reference-file line="76">views/Trainers/form.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8b70bb3a4d458cf297ab7b3a3b07b63b5ca07de9" resname="Man">
+        <source>Man</source>
+        <target>Man</target>
+        <jms:reference-file line="65">PlatformBundle/Form/ContactPeopleType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="80490773145505aec70018e5928d2a63f2e3a0d3" resname="Mode1">
+        <source>Mode1</source>
+        <target>Mode1</target>
+        <jms:reference-file line="57">PlatformBundle/Form/ContractsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1984c1cf29a36292f15f6f8e4052df7a2e1d55ea" resname="Mode2">
+        <source>Mode2</source>
+        <target>Mode2</target>
+        <jms:reference-file line="58">PlatformBundle/Form/ContractsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="11caff6b76aaf996f22045505180638e30d4222c" resname="Mode3">
+        <source>Mode3</source>
+        <target>Mode3</target>
+        <jms:reference-file line="59">PlatformBundle/Form/ContractsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9f8a2389a20ca0752aa9e95093515517e90e194c" resname="User">
+        <source>User</source>
+        <target>User</target>
+        <jms:reference-file line="62">UserBundle/Form/UserType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1cb72b9108626d8ac566eba64409dacf9a40b11e" resname="Woman">
+        <source>Woman</source>
+        <target>Woman</target>
+        <jms:reference-file line="64">PlatformBundle/Form/ContactPeopleType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="326b426f9ac7a96ed6baf62f8838565416d27df8" resname="actions">
+        <source>actions</source>
+        <target>Actions</target>
+        <jms:reference-file line="105">views/Clients/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="179">views/Clients/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="49">views/Clients/view.html.twig</jms:reference-file>
+        <jms:reference-file line="62">views/Contracts/view.html.twig</jms:reference-file>
+        <jms:reference-file line="112">views/Sessions/view.html.twig</jms:reference-file>
+        <jms:reference-file line="48">views/Trainers/view.html.twig</jms:reference-file>
+        <jms:reference-file line="45">views/Trainings/view.html.twig</jms:reference-file>
+        <jms:reference-file line="44">views/Users/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="58d1bbce297de3c304a9fefc3b483181872a5c6b" resname="add">
+        <source>add</source>
+        <target>Add</target>
+        <jms:reference-file line="137">views/Clients/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="205">views/Clients/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="78">views/Clients/view.html.twig</jms:reference-file>
+        <jms:reference-file line="72">views/Trainers/view.html.twig</jms:reference-file>
+        <jms:reference-file line="70">views/Trainings/view.html.twig</jms:reference-file>
+        <jms:reference-file line="65">views/Users/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c662180230cad14787d4ab7e77aa08681ce783fa" resname="address">
+        <source>address</source>
+        <target>Address</target>
+        <jms:reference-file line="66">PlatformBundle/Form/SessionsType.php</jms:reference-file>
+        <jms:reference-file line="90">views/Clients/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="178">views/Clients/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="54">views/Clients/form.html.twig</jms:reference-file>
+        <jms:reference-file line="219">views/Trainers/form.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6b1131868aa663a3a802594bfe90e852919d168e" resname="address.country">
+        <source>address.country</source>
+        <target>Country</target>
+        <jms:reference-file line="47">PlatformBundle/Form/AddressesType.php</jms:reference-file>
+        <jms:reference-file line="102">views/Clients/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0d71085ae5ea4331799fd90bf75e1c6e24c15507" resname="address.line">
+        <source>address.line</source>
+        <target>Address line</target>
+        <jms:reference-file line="99">views/Clients/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2206325a6ebc34037f39efc45a2826fb63325c82" resname="address.line.1">
+        <source>address.line.1</source>
+        <target>Address Line 1</target>
+        <jms:reference-file line="19">PlatformBundle/Form/AddressesType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0380ef5cc0fed10daa822e49bdcc2cd928139fe3" resname="address.line.2">
+        <source>address.line.2</source>
+        <target>Address Line 2</target>
+        <jms:reference-file line="26">PlatformBundle/Form/AddressesType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6ac8ce34b0dae4b832f2ba09bb3fba9cb16a1942" resname="address.locality">
+        <source>address.locality</source>
+        <target>Locality</target>
+        <jms:reference-file line="40">PlatformBundle/Form/AddressesType.php</jms:reference-file>
+        <jms:reference-file line="101">views/Clients/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="48">views/Clients/view.html.twig</jms:reference-file>
+        <jms:reference-file line="105">views/Sessions/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7fe35041bf77e0c467e473ca63a648b2dfb4d618" resname="address.type">
+        <source>address.type</source>
+        <target>Address Type</target>
+        <jms:reference-file line="98">views/Clients/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="58a1d6212f57286262be2c0e69dc31730f6bc66a" resname="address.zip.code">
+        <source>address.zip.code</source>
+        <target>Zip Code</target>
+        <jms:reference-file line="33">PlatformBundle/Form/AddressesType.php</jms:reference-file>
+        <jms:reference-file line="100">views/Clients/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e672f3ee651d3d95ab67f4eb6e6ae70404495a2b" resname="advanced.search">
+        <source>advanced.search</source>
+        <target>Advanced Search</target>
+        <jms:reference-file line="36">views/Sessions/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4fd0653c4f2aef3b19a3c145bbdc5f4740715a09" resname="cancel">
+        <source>cancel</source>
+        <target>Cancel</target>
+        <jms:reference-file line="28">views/Clients/add.html.twig</jms:reference-file>
+        <jms:reference-file line="237">views/Clients/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="48">views/Contracts/add.html.twig</jms:reference-file>
+        <jms:reference-file line="48">views/Contracts/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="33">views/Sessions/add.html.twig</jms:reference-file>
+        <jms:reference-file line="33">views/Sessions/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="84">views/Sessions/view.html.twig</jms:reference-file>
+        <jms:reference-file line="29">views/Trainers/add.html.twig</jms:reference-file>
+        <jms:reference-file line="29">views/Trainers/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="34">views/Trainings/add.html.twig</jms:reference-file>
+        <jms:reference-file line="29">views/Trainings/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="34">views/Users/add.html.twig</jms:reference-file>
+        <jms:reference-file line="34">views/Users/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9e32521dd2f8b27b64fe869fdadfa53e7d976f56" resname="car">
+        <source>car</source>
+        <target>Car</target>
+        <jms:reference-file line="38">views/Trainers/form.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d2a04d71301a8915217dd5faf81d12cffd6cd958" resname="client">
+        <source>client</source>
+        <target>Client</target>
+        <jms:reference-file line="39">PlatformBundle/Form/SessionsSearchType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="33c4004c665b749806c1fc6437c832f3fd53b09e" resname="client.VATNumber">
+        <source>client.VATNumber</source>
+        <target>VAT Number</target>
+        <jms:reference-file line="40">PlatformBundle/Form/ClientsType.php</jms:reference-file>
+        <jms:reference-file line="47">views/Clients/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fcf03b9b6c461aef741f91d66ff74aa792f98019" resname="client.abbreviation">
+        <source>client.abbreviation</source>
+        <target>Abbreviation</target>
+        <jms:reference-file line="33">PlatformBundle/Form/ClientsType.php</jms:reference-file>
+        <jms:reference-file line="44">views/Clients/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="878e7b892f58b50e33377efc4faff3cff13294d0" resname="client.category">
+        <source>client.category</source>
+        <target>Category</target>
+        <jms:reference-file line="47">PlatformBundle/Form/ClientsType.php</jms:reference-file>
+        <jms:reference-file line="46">views/Clients/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5670b9971cce60c90bf6f86b90ab9393542db581" resname="client.contact.people">
+        <source>client.contact.people</source>
+        <target>Contact's People</target>
+        <jms:reference-file line="164">views/Clients/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="65">views/Clients/form.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="45ca65a621159bc6b0db93c75ed1912b4be5f783" resname="client.contract.new">
+        <source>client.contract.new</source>
+        <target>New Contract</target>
+        <jms:reference-file line="39">views/Contracts/add.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ff6816a95665fc0212c670ff5f11b8488c3f1915" resname="client.details">
+        <source>client.details</source>
+        <target>Client's Details</target>
+        <jms:reference-file line="40">views/Clients/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="4">views/Clients/form.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="63684fd0ea71095ee9625ca4888dcf9343ab0964" resname="client.edit">
+        <source>client.edit</source>
+        <target>Edit Client</target>
+        <jms:reference-file line="33">views/Clients/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ebde6f9b5d8e9fc5003cb8048a89e22f097c1733" resname="client.list">
+        <source>client.list</source>
+        <target>Client's List</target>
+        <jms:reference-file line="36">views/Clients/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="72a954030ff4c5743631fda5b2df8a1d2934fc54" resname="client.name">
+        <source>client.name</source>
+        <target>Name</target>
+        <jms:reference-file line="26">PlatformBundle/Form/ClientsType.php</jms:reference-file>
+        <jms:reference-file line="45">views/Clients/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9a5a1c3361e0d354698d08e3109c8e8f14701e68" resname="client.new">
+        <source>client.new</source>
+        <target>New Client</target>
+        <jms:reference-file line="20">views/Clients/add.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="16c9386f46aad6420c46b7206de55c7b7dc970c4" resname="client.save">
+        <source>client.save</source>
+        <target>Save</target>
+        <jms:reference-file line="67">PlatformBundle/Form/ClientsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="837f552c659d40da549c62131ab812a0a7961ba1" resname="clientAddress.delivery">
+        <source>clientAddress.delivery</source>
+        <target>Invoicing Address</target>
+        <jms:reference-file line="41">PlatformBundle/Form/ClientAddressesType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="dca40edb59e74ccbfe30e787c81483bfd071a471" resname="clientAddress.firstname">
+        <source>clientAddress.firstname</source>
+        <target>Firstname</target>
+        <jms:reference-file line="27">PlatformBundle/Form/ClientAddressesType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e159b079b9f84c7e78b9ea711fc9e4bde03d25cf" resname="clientAddress.lastname">
+        <source>clientAddress.lastname</source>
+        <target>Lastname</target>
+        <jms:reference-file line="20">PlatformBundle/Form/ClientAddressesType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="af84eed15b3ebc6cff9a5cdaf3ce275dd20b2bf8" resname="clientAddress.name">
+        <source>clientAddress.name</source>
+        <target>Name</target>
+        <jms:reference-file line="103">views/Clients/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0243518a0695f55534ddcb9898ce3b9d954e43f9" resname="clientAddress.phone">
+        <source>clientAddress.phone</source>
+        <target>Phone</target>
+        <jms:reference-file line="34">PlatformBundle/Form/ClientAddressesType.php</jms:reference-file>
+        <jms:reference-file line="104">views/Clients/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="93df14617ceda8ee499003ae137b44e91aa26cce" resname="clients">
+        <source>clients</source>
+        <target>Clients</target>
+        <jms:reference-file line="4">views/Clients/add.html.twig</jms:reference-file>
+        <jms:reference-file line="4">views/Clients/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="4">views/Clients/view.html.twig</jms:reference-file>
+        <jms:reference-file line="30">views/Clients/view.html.twig</jms:reference-file>
+        <jms:reference-file line="93">Resources/views/layout.html.twig</jms:reference-file>
+        <jms:reference-file line="103">views/Sessions/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="da38860cb875cb64092e402d80d9fe29c4865b18" resname="close">
+        <source>close</source>
+        <target>Close</target>
+        <jms:reference-file line="151">views/Clients/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="219">views/Clients/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="814605c64a5c1c3c2d3c2c332153f0e425e92653" resname="connection">
+        <source>connection</source>
+        <target>Connection</target>
+        <jms:reference-file line="57">Resources/views/layout.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="11d089c6b42eaf446a1c2a5ed0c92c77796ec230" resname="contactPerson.firstname">
+        <source>contactPerson.firstname</source>
+        <target>Contact Firstname</target>
+        <jms:reference-file line="26">PlatformBundle/Form/ContactPeopleType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f8d26a99816e1348332cfc8ee4c710a308a97db5" resname="contactPerson.function">
+        <source>contactPerson.function</source>
+        <target>Function</target>
+        <jms:reference-file line="47">PlatformBundle/Form/ContactPeopleType.php</jms:reference-file>
+        <jms:reference-file line="175">views/Clients/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="533883678e4ae26d5b898974bdcaf8ff0cb63e50" resname="contactPerson.gender">
+        <source>contactPerson.gender</source>
+        <target>Gender</target>
+        <jms:reference-file line="61">PlatformBundle/Form/ContactPeopleType.php</jms:reference-file>
+        <jms:reference-file line="177">views/Clients/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ee20b4d61efaaeacbfb929b2942ea2a755cc59b4" resname="contactPerson.language">
+        <source>contactPerson.language</source>
+        <target>Speaking language</target>
+        <jms:reference-file line="54">PlatformBundle/Form/ContactPeopleType.php</jms:reference-file>
+        <jms:reference-file line="176">views/Clients/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fd88eb09ac498f1f6b8adfe6431b56963ab376ea" resname="contactPerson.lastname">
+        <source>contactPerson.lastname</source>
+        <target>Contact Lastname</target>
+        <jms:reference-file line="19">PlatformBundle/Form/ContactPeopleType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1090d47a9bbca30dbe960357361c4e4fe6253653" resname="contactPerson.mail">
+        <source>contactPerson.mail</source>
+        <target>Mail</target>
+        <jms:reference-file line="40">PlatformBundle/Form/ContactPeopleType.php</jms:reference-file>
+        <jms:reference-file line="173">views/Clients/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="899d2d31436a0df76f3b7dec7eee0c3e2769a343" resname="contactPerson.name">
+        <source>contactPerson.name</source>
+        <target>Name</target>
+        <jms:reference-file line="172">views/Clients/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c58104d8ef60c4069035eb50335db33b13e3ff13" resname="contactPerson.phone">
+        <source>contactPerson.phone</source>
+        <target>Phone Number</target>
+        <jms:reference-file line="33">PlatformBundle/Form/ContactPeopleType.php</jms:reference-file>
+        <jms:reference-file line="174">views/Clients/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d61ceadbdb0081cce7a2c1f65558bd2243ecc161" resname="contract">
+        <source>contract</source>
+        <target>Contract</target>
+        <jms:reference-file line="49">PlatformBundle/Form/SessionsSearchType.php</jms:reference-file>
+        <jms:reference-file line="75">PlatformBundle/Form/SessionsType.php</jms:reference-file>
+        <jms:reference-file line="66">views/Clients/view.html.twig</jms:reference-file>
+        <jms:reference-file line="38">views/Contracts/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5bb9fe21f930e0d75280833796fd5f0197da1bfa" resname="contract.balance">
+        <source>contract.balance</source>
+        <target>Contract's Balance</target>
+        <jms:reference-file line="47">PlatformBundle/Form/ContractsType.php</jms:reference-file>
+        <jms:reference-file line="60">views/Contracts/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1ad2e459b5f75c5aba00747b259656d5f50a71bc" resname="contract.begin.date">
+        <source>contract.begin.date</source>
+        <target>Begin Date</target>
+        <jms:reference-file line="67">PlatformBundle/Form/ContractsType.php</jms:reference-file>
+        <jms:reference-file line="54">views/Contracts/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c3716f831b6ea2e9c472989a33269bdd4111575c" resname="contract.daily.amount">
+        <source>contract.daily.amount</source>
+        <target>Daily Amount</target>
+        <jms:reference-file line="33">PlatformBundle/Form/ContractsType.php</jms:reference-file>
+        <jms:reference-file line="58">views/Contracts/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e99b850a05cb20f15467ac59f93abd8f6919338a" resname="contract.days.number">
+        <source>contract.days.number</source>
+        <target>Number of days</target>
+        <jms:reference-file line="40">PlatformBundle/Form/ContractsType.php</jms:reference-file>
+        <jms:reference-file line="56">views/Contracts/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b3f8e6ce87632f6ed17847bbf70e739d4f829083" resname="contract.details">
+        <source>contract.details</source>
+        <target>Contract's Details</target>
+        <jms:reference-file line="3">views/Contracts/form.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4a1a4385b137995a8433ad44e0d33376c090ec03" resname="contract.edit">
+        <source>contract.edit</source>
+        <target>Edit Contract</target>
+        <jms:reference-file line="39">views/Contracts/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="23c0ba3d572ed7a3c5af06151d3a6311128f44e4" resname="contract.end.date">
+        <source>contract.end.date</source>
+        <target>End Date</target>
+        <jms:reference-file line="75">PlatformBundle/Form/ContractsType.php</jms:reference-file>
+        <jms:reference-file line="55">views/Contracts/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1d79cf63a7ac88e23b01556696d1a5fc99f274d5" resname="contract.extended.date">
+        <source>contract.extended.date</source>
+        <target>Extended End Date</target>
+        <jms:reference-file line="83">PlatformBundle/Form/ContractsType.php</jms:reference-file>
+        <jms:reference-file line="57">views/Contracts/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c42a3f8410bbf96991438a4e1f8b0b7dd5aaab9d" resname="contract.facturation.mode">
+        <source>contract.facturation.mode</source>
+        <target>Facturation Mode</target>
+        <jms:reference-file line="54">PlatformBundle/Form/ContractsType.php</jms:reference-file>
+        <jms:reference-file line="61">views/Contracts/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="065dbf2e36b95aa9c38249dd56d39e255a3a05cf" resname="contract.list">
+        <source>contract.list</source>
+        <target>Contract's List</target>
+        <jms:reference-file line="45">views/Contracts/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f34d3158de8bd3647c6969f7a8c9348a27230f14" resname="contract.new">
+        <source>contract.new</source>
+        <target>New</target>
+        <jms:reference-file line="91">views/Contracts/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a9ed2f1309dfe357012a16ed1a9d0440edb33207" resname="contract.number">
+        <source>contract.number</source>
+        <target>Contract Number</target>
+        <jms:reference-file line="19">PlatformBundle/Form/ContractsType.php</jms:reference-file>
+        <jms:reference-file line="53">views/Contracts/view.html.twig</jms:reference-file>
+        <jms:reference-file line="104">views/Sessions/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4740077e3aeefeee8761ebcdb67ecf51f15ce54d" resname="contract.total.amount">
+        <source>contract.total.amount</source>
+        <target>Total Amount</target>
+        <jms:reference-file line="26">PlatformBundle/Form/ContractsType.php</jms:reference-file>
+        <jms:reference-file line="59">views/Contracts/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="80cff8957468db524c48b16afa634d5c84323541" resname="contracts">
+        <source>contracts</source>
+        <target>Contracts</target>
+        <jms:reference-file line="4">views/Contracts/add.html.twig</jms:reference-file>
+        <jms:reference-file line="4">views/Contracts/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="4">views/Contracts/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9485989ff514b5106b7738850fd73c23e8c1e3f7" resname="delete">
+        <source>delete</source>
+        <target>Delete</target>
+        <jms:reference-file line="129">views/Clients/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="196">views/Clients/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="70">views/Clients/view.html.twig</jms:reference-file>
+        <jms:reference-file line="83">views/Contracts/view.html.twig</jms:reference-file>
+        <jms:reference-file line="64">views/Trainers/view.html.twig</jms:reference-file>
+        <jms:reference-file line="62">views/Trainings/view.html.twig</jms:reference-file>
+        <jms:reference-file line="57">views/Users/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9ead47a82a0d25985f22f10651d1f93b3abba317" resname="edit">
+        <source>edit</source>
+        <target>Edit</target>
+        <jms:reference-file line="127">views/Clients/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="194">views/Clients/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="62">views/Clients/view.html.twig</jms:reference-file>
+        <jms:reference-file line="80">views/Contracts/view.html.twig</jms:reference-file>
+        <jms:reference-file line="61">views/Trainers/view.html.twig</jms:reference-file>
+        <jms:reference-file line="59">views/Trainings/view.html.twig</jms:reference-file>
+        <jms:reference-file line="54">views/Users/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="55525e1b3dfd8787fd202aed45fb04494e3242d0" resname="logout">
+        <source>logout</source>
+        <target>Logout</target>
+        <jms:reference-file line="50">Resources/views/layout.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1ba6e5cfcc7e2e5b2106b7eef5e786fae4529975" resname="menu.contracts">
+        <source>menu.contracts</source>
+        <target>Contracts</target>
+        <jms:reference-file line="8">views/Contracts/add.html.twig</jms:reference-file>
+        <jms:reference-file line="24">views/Contracts/add.html.twig</jms:reference-file>
+        <jms:reference-file line="8">views/Contracts/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="24">views/Contracts/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="24">views/Contracts/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bca18fe59249c325cfd67b5b5cc5e6b196419232" resname="menu.details">
+        <source>menu.details</source>
+        <target>Details</target>
+        <jms:reference-file line="11">views/Clients/add.html.twig</jms:reference-file>
+        <jms:reference-file line="22">views/Clients/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="22">views/Clients/view.html.twig</jms:reference-file>
+        <jms:reference-file line="12">views/Contracts/add.html.twig</jms:reference-file>
+        <jms:reference-file line="21">views/Contracts/add.html.twig</jms:reference-file>
+        <jms:reference-file line="28">views/Contracts/add.html.twig</jms:reference-file>
+        <jms:reference-file line="12">views/Contracts/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="21">views/Contracts/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="28">views/Contracts/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="21">views/Contracts/view.html.twig</jms:reference-file>
+        <jms:reference-file line="28">views/Contracts/view.html.twig</jms:reference-file>
+        <jms:reference-file line="15">views/Sessions/add.html.twig</jms:reference-file>
+        <jms:reference-file line="15">views/Sessions/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="22">views/Sessions/view.html.twig</jms:reference-file>
+        <jms:reference-file line="11">views/Trainers/add.html.twig</jms:reference-file>
+        <jms:reference-file line="11">views/Trainers/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="20">views/Trainers/view.html.twig</jms:reference-file>
+        <jms:reference-file line="16">views/Trainings/add.html.twig</jms:reference-file>
+        <jms:reference-file line="11">views/Trainings/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="20">views/Trainings/view.html.twig</jms:reference-file>
+        <jms:reference-file line="16">views/Users/add.html.twig</jms:reference-file>
+        <jms:reference-file line="16">views/Users/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="20">views/Users/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="352f4e0167f315191f1989697780990948d583ec" resname="menu.planning">
+        <source>menu.planning</source>
+        <target>Planning</target>
+        <jms:reference-file line="88">Resources/views/layout.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="41441b2fed1312075b928c2d844bd86b19df8e71" resname="menu.sessions">
+        <source>menu.sessions</source>
+        <target>Sessions</target>
+        <jms:reference-file line="73">Resources/views/layout.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4bb50aec4b454b8d00a901215aa8a573c1096704" resname="menu.trainers">
+        <source>menu.trainers</source>
+        <target>Trainers</target>
+        <jms:reference-file line="100">Resources/views/layout.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d341042763bcfb5661e5d5d7b1df58168f896c66" resname="menu.trainings">
+        <source>menu.trainings</source>
+        <target>Trainings</target>
+        <jms:reference-file line="81">Resources/views/layout.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1869f673cd4f432a077d4bacc21b6e837441e8a4" resname="menu.users">
+        <source>menu.users</source>
+        <target>Users</target>
+        <jms:reference-file line="107">Resources/views/layout.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6c9e1b9239d31ebb73e9b5827b29518daba80c4a" resname="modal.ClientAddress">
+        <source>modal.ClientAddress</source>
+        <target>Client's Address</target>
+        <jms:reference-file line="145">views/Clients/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bfcc907745f0fb24b87a186d3305e642febd98b4" resname="modal.contactPerson">
+        <source>modal.contactPerson</source>
+        <target>Contact Person</target>
+        <jms:reference-file line="213">views/Clients/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d510ec2d782fb563b296dc1cbe17b0826c417a8e" resname="performance.type">
+        <source>performance.type</source>
+        <target>Performance Type</target>
+        <jms:reference-file line="98">PlatformBundle/Form/SessionsType.php</jms:reference-file>
+        <jms:reference-file line="110">views/Sessions/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bdf5c73d18f44e2997e2dd1348b16d350106f6e2" resname="planning">
+        <source>planning</source>
+        <target>Planning</target>
+        <jms:reference-file line="4">views/Plannings/view.html.twig</jms:reference-file>
+        <jms:reference-file line="18">views/Plannings/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="652cf79b829440b5ba4c2477d05048d3b1cfc6d9" resname="range.date.begin">
+        <source>range.date.begin</source>
+        <target>Begin</target>
+        <jms:reference-file line="30">PlatformBundle/Form/RangeDatesType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="99ab30a542ed0251e921cc2ae34c29c86dad64c3" resname="range.date.end">
+        <source>range.date.end</source>
+        <target>End</target>
+        <jms:reference-file line="38">PlatformBundle/Form/RangeDatesType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="13a4a11319d31c1b323d5774f44240a9ffc984d0" resname="save">
+        <source>save</source>
+        <target>Save</target>
+        <jms:reference-file line="152">views/Clients/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="220">views/Clients/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fcbdc4c271c889825d8338d2d8f10b6e5e95c171" resname="session">
+        <source>session</source>
+        <target>Session</target>
+        <jms:reference-file line="30">views/Sessions/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5ddfbf5ece1476a9c77f03c91b970e4540fc0b7c" resname="session.begin">
+        <source>session.begin</source>
+        <target>Begin</target>
+        <jms:reference-file line="101">views/Sessions/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="30d3f4882b9e2f9517aad3685b27b178b898de6b" resname="session.category">
+        <source>session.category</source>
+        <target>Training Category</target>
+        <jms:reference-file line="88">PlatformBundle/Form/SessionsType.php</jms:reference-file>
+        <jms:reference-file line="109">views/Sessions/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8413d9dea3e7c6ce99df9f2075661822ba51958e" resname="session.daily.amount">
+        <source>session.daily.amount</source>
+        <target>Daily Amount</target>
+        <jms:reference-file line="20">PlatformBundle/Form/SessionsType.php</jms:reference-file>
+        <jms:reference-file line="107">views/Sessions/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8e4c1a16d8dfa579c2aac303b19d79dad4ac987d" resname="session.details">
+        <source>session.details</source>
+        <target>Session's Details</target>
+        <jms:reference-file line="3">views/Sessions/form.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fccf8510dc818a7e6c69c279cde52d19595c02e1" resname="session.edit">
+        <source>session.edit</source>
+        <target>Edit</target>
+        <jms:reference-file line="24">views/Sessions/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="74b342ae6666afd2e3263e97c55a35d187d64eb9" resname="session.end">
+        <source>session.end</source>
+        <target>End</target>
+        <jms:reference-file line="102">views/Sessions/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0c78bbc4d519fab05e4f25dba736fdda9dc1ba9e" resname="session.list">
+        <source>session.list</source>
+        <target>Session's List</target>
+        <jms:reference-file line="93">views/Sessions/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5fc36f2618c1b148348fcb11a4dd1d7276ae739a" resname="session.new">
+        <source>session.new</source>
+        <target>New Session</target>
+        <jms:reference-file line="24">views/Sessions/add.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="781791f54cc086d0eef3bc9b19e578a3fc33c662" resname="sessions">
+        <source>sessions</source>
+        <target>Sessions</target>
+        <jms:reference-file line="4">views/Sessions/add.html.twig</jms:reference-file>
+        <jms:reference-file line="4">views/Sessions/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="4">views/Sessions/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3cc1d5a427a45820b04fe30f78a972b784952460" resname="settings">
+        <source>settings</source>
+        <target>Settings</target>
+        <jms:reference-file line="46">Resources/views/layout.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="297e1479cf75d300a89a5b6ec208fd979209878b" resname="trainer">
+        <source>trainer</source>
+        <target>Trainer</target>
+        <jms:reference-file line="29">PlatformBundle/Form/SessionsSearchType.php</jms:reference-file>
+        <jms:reference-file line="57">PlatformBundle/Form/SessionsType.php</jms:reference-file>
+        <jms:reference-file line="111">views/Sessions/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="03a58241b3e46dd0ba71a186e72648568700629c" resname="trainer.GSM">
+        <source>trainer.GSM</source>
+        <target>GSM</target>
+        <jms:reference-file line="33">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="cd33f016894c62abcecc3820e1e64829c6741eb6" resname="trainer.TVA.number">
+        <source>trainer.TVA.number</source>
+        <target>VAT Number</target>
+        <jms:reference-file line="137">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="688338c21a7a2db9919191558ab2ef046910931c" resname="trainer.birthdate">
+        <source>trainer.birthdate</source>
+        <target>Birthdate</target>
+        <jms:reference-file line="40">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+        <jms:reference-file line="46">views/Trainers/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="df26109e5464ddd3e156c2800ecd3a427a0f9f5a" resname="trainer.car.color">
+        <source>trainer.car.color</source>
+        <target>Car's Color</target>
+        <jms:reference-file line="69">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="68aa9ea7d9051679732f04849fb10e01434df07e" resname="trainer.car.model">
+        <source>trainer.car.model</source>
+        <target>Car's Model</target>
+        <jms:reference-file line="76">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="026ccf805f4b14aebe81650815f8c11a69d57231" resname="trainer.client.mail">
+        <source>trainer.client.mail</source>
+        <target>Client's Mail</target>
+        <jms:reference-file line="97">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="259fd4859bbf9a43110acd172a435390615b14a1" resname="trainer.country">
+        <source>trainer.country</source>
+        <target>Country Based</target>
+        <jms:reference-file line="153">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7c81bd1f2d8b8afa17ae263d5517b0a57b01ca78" resname="trainer.cv">
+        <source>trainer.cv</source>
+        <target>CV</target>
+        <jms:reference-file line="115">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+        <jms:reference-file line="198">views/Trainers/form.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5df6f7bbd95a108d5cc3704504f6390e591cbac5" resname="trainer.daily.wage">
+        <source>trainer.daily.wage</source>
+        <target>Daily Wage</target>
+        <jms:reference-file line="144">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fca84ce0015e536e4f1718f94f2bb74d2ae32a87" resname="trainer.edit">
+        <source>trainer.edit</source>
+        <target>Edit Trainer</target>
+        <jms:reference-file line="20">views/Trainers/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="56ada48320fad88f2e4c7ccdd0a3c4f5b0ebed17" resname="trainer.first.day">
+        <source>trainer.first.day</source>
+        <target>First Day Date</target>
+        <jms:reference-file line="107">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1b60bfa3d5d9499941542171cb117cd1f06bba13" resname="trainer.firstname">
+        <source>trainer.firstname</source>
+        <target>Firstname</target>
+        <jms:reference-file line="26">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="63183820d5a13ea328f5cdac7f3aacaf6e45d2f4" resname="trainer.identity.card.number">
+        <source>trainer.identity.card.number</source>
+        <target>Identity Card Number</target>
+        <jms:reference-file line="48">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7d7aa9004f9a67b00aab66c46922aa55861d959a" resname="trainer.bstorm.mail">
+        <source>trainer.bstorm.mail</source>
+        <target>bstorm Mail</target>
+        <jms:reference-file line="83">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+        <jms:reference-file line="44">views/Trainers/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2572c4a8855b7c5c8ca2cf365ef9d435b98549b5" resname="trainer.kilometre.rates">
+        <source>trainer.kilometre.rates</source>
+        <target>Kilometre Rates</target>
+        <jms:reference-file line="162">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0d1f2ff3ffa8beed3516d38b6d4186ff3e129293" resname="trainer.language">
+        <source>trainer.language</source>
+        <target>Language</target>
+        <jms:reference-file line="48">PlatformBundle/Form/SessionsType.php</jms:reference-file>
+        <jms:reference-file line="122">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+        <jms:reference-file line="108">views/Sessions/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1a0e82f3c0b94b4d0f115922d4a4c301a121659b" resname="trainer.lastname">
+        <source>trainer.lastname</source>
+        <target>Lastname</target>
+        <jms:reference-file line="19">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d248e4ada45d2b60916426e492a4d94eec062d14" resname="trainer.list">
+        <source>trainer.list</source>
+        <target>Trainer's List</target>
+        <jms:reference-file line="35">views/Trainers/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8f31c982771af5d73f9425224efc32295fa2c888" resname="trainer.name">
+        <source>trainer.name</source>
+        <target>Name</target>
+        <jms:reference-file line="43">views/Trainers/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="409350df8105ed9c931b19842db50e590693eb21" resname="trainer.nationality">
+        <source>trainer.nationality</source>
+        <target>Nationality</target>
+        <jms:reference-file line="55">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+        <jms:reference-file line="47">views/Trainers/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e17f687963bad03dd6b781f4a527bda5aea5829e" resname="trainer.new">
+        <source>trainer.new</source>
+        <target>New Trainer</target>
+        <jms:reference-file line="20">views/Trainers/add.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5ab3c9d9de3d2d51877514c4c9184188bf7032c7" resname="trainer.number.plate">
+        <source>trainer.number.plate</source>
+        <target>Plate's Number</target>
+        <jms:reference-file line="62">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8a3834eecec4632a294fe6090f5ccafccdc44173" resname="trainer.personal.mail">
+        <source>trainer.personal.mail</source>
+        <target>Personal Mail</target>
+        <jms:reference-file line="90">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+        <jms:reference-file line="45">views/Trainers/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="64c268c4dd04bb6c0a3ba5e3c7b4e1ad0fe8956f" resname="trainer.self.employed">
+        <source>trainer.self.employed</source>
+        <target>Self Employed</target>
+        <jms:reference-file line="130">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c87c5d8a42937f478c05616be6c2cfe545639e6d" resname="trainers">
+        <source>trainers</source>
+        <target>Trainers</target>
+        <jms:reference-file line="4">views/Trainers/add.html.twig</jms:reference-file>
+        <jms:reference-file line="4">views/Trainers/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="4">views/Trainers/view.html.twig</jms:reference-file>
+        <jms:reference-file line="28">views/Trainers/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0a2b9827e548969e4dfe1b0d16c072ef347836d6" resname="training">
+        <source>training</source>
+        <target>Training</target>
+        <jms:reference-file line="20">PlatformBundle/Form/SessionsSearchType.php</jms:reference-file>
+        <jms:reference-file line="27">PlatformBundle/Form/SessionsType.php</jms:reference-file>
+        <jms:reference-file line="106">views/Sessions/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f944f6ba55325c4e1e4f0a1bbd167991490cafc3" resname="training.details">
+        <source>training.details</source>
+        <target>Training Details</target>
+        <jms:reference-file line="20">views/Trainings/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3b25ad7968c037920ad3f524ff2196e70c952f88" resname="training.link">
+        <source>training.link</source>
+        <target>Sharepoint Link</target>
+        <jms:reference-file line="26">PlatformBundle/Form/TrainingsType.php</jms:reference-file>
+        <jms:reference-file line="43">views/Trainings/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="065098ad002054b95e356f8d74eae3961ba4e77e" resname="training.list">
+        <source>training.list</source>
+        <target>Training's List</target>
+        <jms:reference-file line="34">views/Trainings/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f4c7f2bef80244713abfd2138f4c08d2e89d5500" resname="training.name">
+        <source>training.name</source>
+        <target>Name</target>
+        <jms:reference-file line="19">PlatformBundle/Form/TrainingsType.php</jms:reference-file>
+        <jms:reference-file line="42">views/Trainings/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="876b0e1441852ffc0fb476a4d3ae7b4e4be8406c" resname="training.new">
+        <source>training.new</source>
+        <target>New Training</target>
+        <jms:reference-file line="25">views/Trainings/add.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="dca7b57fa91d6abeb3b6f696090997e40dbd6ae4" resname="training.tools">
+        <source>training.tools</source>
+        <target>Tools</target>
+        <jms:reference-file line="33">PlatformBundle/Form/TrainingsType.php</jms:reference-file>
+        <jms:reference-file line="44">views/Trainings/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="77e1e02c94606dda0c67cf750cc4d42185877390" resname="trainings">
+        <source>trainings</source>
+        <target>Trainings</target>
+        <jms:reference-file line="4">views/Trainings/add.html.twig</jms:reference-file>
+        <jms:reference-file line="4">views/Trainings/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="4">views/Trainings/view.html.twig</jms:reference-file>
+        <jms:reference-file line="28">views/Trainings/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fe4c80d12a4f145b2ef5a8257871f5b31bde8d41" resname="trainings.details">
+        <source>trainings.details</source>
+        <target>Training Details</target>
+        <jms:reference-file line="3">views/Trainings/form.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="20afd5b376ab9ffb3cfe083496345d7e9d11d9f5" resname="user.email">
+        <source>user.email</source>
+        <target>Email</target>
+        <jms:reference-file line="27">UserBundle/Form/UserType.php</jms:reference-file>
+        <jms:reference-file line="42">views/Users/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="66da11cf39671a23ef1f26d4b8fe89f94786fec2" resname="user.list">
+        <source>user.list</source>
+        <target>User's list</target>
+        <jms:reference-file line="34">views/Users/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="140e18ea96c4b37f14b4c9b9fa5b420e8454e614" resname="user.new">
+        <source>user.new</source>
+        <target>New</target>
+        <jms:reference-file line="25">views/Users/add.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e4d06be519f5ddd5206349fb39cf7522dd947a3a" resname="user.password">
+        <source>user.password</source>
+        <target>Password</target>
+        <jms:reference-file line="34">UserBundle/Form/UserType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f0a4bf06e8b699eb5eac4265f418c67594986fb6" resname="user.profile">
+        <source>user.profile</source>
+        <target>Profile</target>
+        <jms:reference-file line="44">Resources/views/layout.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4936a9fc202bd255efee549e1440d0c3fa2e901e" resname="user.roles">
+        <source>user.roles</source>
+        <target>Roles</target>
+        <jms:reference-file line="58">UserBundle/Form/UserType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9b9b24bd6df7ab902863c3560dab082512bceee1" resname="user.username">
+        <source>user.username</source>
+        <target>Username</target>
+        <jms:reference-file line="19">UserBundle/Form/UserType.php</jms:reference-file>
+        <jms:reference-file line="43">views/Users/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5b7dcd14a4faa2cdd54cf6eb8d4bc35da31914a1" resname="users">
+        <source>users</source>
+        <target>Users</target>
+        <jms:reference-file line="4">views/Users/add.html.twig</jms:reference-file>
+        <jms:reference-file line="4">views/Users/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="4">views/Users/view.html.twig</jms:reference-file>
+        <jms:reference-file line="28">views/Users/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8fafbf8ddd34fe237d211e986867e1fb2503a400" resname="users.details">
+        <source>users.details</source>
+        <target>Details</target>
+        <jms:reference-file line="3">views/Users/form.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5fbd82bcdb0f639d5e8dc5b16e3707a0ec673f56" resname="users.edit">
+        <source>users.edit</source>
+        <target>Edit</target>
+        <jms:reference-file line="25">views/Users/edit.html.twig</jms:reference-file>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
