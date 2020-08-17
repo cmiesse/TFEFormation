@@ -827,6 +827,41 @@
         <target>Edit</target>
         <jms:reference-file line="25">views/Users/edit.html.twig</jms:reference-file>
       </trans-unit>
+      <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1" resname="log.in">
+        <source>log.in</source>
+        <target>Log in</target>
+        <jms:reference-file line="38">views/Security/log.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2" resname="email.and.password">
+        <source>email.and.password</source>
+        <target>Email and password</target>
+        <jms:reference-file line="6">views/Security/log.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa3" resname="login">
+        <source>login</source>
+        <target>Log in</target>
+        <jms:reference-file line="4">views/Security/log.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa4" resname="email">
+        <source>email</source>
+        <target>Email</target>
+        <jms:reference-file line="18">views/Security/log.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa5" resname="password">
+        <source>password</source>
+        <target>Password</target>
+        <jms:reference-file line="24">views/Security/log.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa6" resname="password.forgot">
+        <source>password.forgot</source>
+        <target>Forgot password</target>
+        <jms:reference-file line="27">views/Security/log.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa7" resname="remember.me">
+        <source>remember.me</source>
+        <target>Remember me</target>
+        <jms:reference-file line="35">views/Security/log.html.twig</jms:reference-file>
+      </trans-unit>
     </body>
   </file>
 </xliff>
