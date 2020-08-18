@@ -862,6 +862,48 @@
         <target>Remember me</target>
         <jms:reference-file line="35">views/Security/log.html.twig</jms:reference-file>
       </trans-unit>
+      <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa8" resname="password.reset">
+        <source>password.reset</source>
+        <target>Password reset</target>
+        <jms:reference-file line="3">views/ChangePassword/changePassword_content.html.twig</jms:reference-file>
+        <jms:reference-file line="3">views/Resetting/reset_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa9" resname="password.new.input">
+        <source>password.new.input</source>
+        <target>Enter the new password</target>
+        <jms:reference-file line="4">views/Resetting/reset_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa10" resname="password.current">
+        <source>password.current</source>
+        <target>Current password</target>
+        <jms:reference-file line="11">views/ChangePassword/changePassword_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa11" resname="password.new">
+        <source>password.new</source>
+        <target>New password</target>
+        <jms:reference-file line="18">views/ChangePassword/changePassword_content.html.twig</jms:reference-file>
+        <jms:reference-file line="11">views/Resetting/reset_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa12" resname="password.new.verif">
+        <source>password.new.verif</source>
+        <target>New password verification</target>
+        <jms:reference-file line="25">views/ChangePassword/changePassword_content.html.twig</jms:reference-file>
+        <jms:reference-file line="18">views/Resetting/reset_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa13" resname="login.back">
+        <source>login.back</source>
+        <target>Back to login</target>
+        <jms:reference-file line="31">views/ChangePassword/changePassword_content.html.twig</jms:reference-file>
+        <jms:reference-file line="11">views/Resetting/checkEmail.html.twig</jms:reference-file>
+        <jms:reference-file line="11">views/Resetting/passwordAlreadyRequested.html.twig</jms:reference-file>
+        <jms:reference-file line="23">views/Resetting/request_content.html.twig</jms:reference-file>
+        <jms:reference-file line="24">views/Resetting/reset_content.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa14" resname="change_password.submit">
+        <source>change_password.submit</source>
+        <target>Change password</target>
+        <jms:reference-file line="34">views/ChangePassword/changePassword_content.html.twig</jms:reference-file>
+      </trans-unit>
     </body>
   </file>
 </xliff>
