@@ -904,6 +904,57 @@
         <target>Change password</target>
         <jms:reference-file line="34">views/ChangePassword/changePassword_content.html.twig</jms:reference-file>
       </trans-unit>
+      <trans-unit id="tools" resname="tools">
+        <source>tools</source>
+        <target>Tools</target>
+        <jms:reference-file line="4">views/Tools/add.html.twig</jms:reference-file>
+        <jms:reference-file line="4">views/Tools/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="4">views/Tools/view.html.twig</jms:reference-file>
+        <jms:reference-file line="17">views/Tools/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="toollist" resname="tool.list">
+        <source>tool.list</source>
+        <target>Tool's List</target>
+        <jms:reference-file line="24">views/Tools/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="toolnew" resname="tool.new">
+        <source>tool.new</source>
+        <target>New tool</target>
+        <jms:reference-file line="15">views/Tools/add.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="tooldetails" resname="tools.details">
+        <source>tools.details</source>
+        <target>Tool's Details</target>
+        <jms:reference-file line="4">views/Tools/form.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="editors" resname="editors">
+        <source>editors</source>
+        <target>Editors</target>
+        <jms:reference-file line="4">views/Editor/add.html.twig</jms:reference-file>
+        <jms:reference-file line="4">views/Editor/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="4">views/Editor/view.html.twig</jms:reference-file>
+        <jms:reference-file line="17">views/Editor/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="editorlist" resname="editor.list">
+        <source>editor.list</source>
+        <target>Editor's List</target>
+        <jms:reference-file line="24">views/Editor/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="editorname" resname="editor.name">
+        <source>editor.name</source>
+        <target>Editor Name</target>
+        <jms:reference-file line="30">views/Editor/view.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="editornew" resname="editor.new">
+        <source>editor.new</source>
+        <target>New editor</target>
+        <jms:reference-file line="10">views/Editor/add.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="editorsdetails" resname="editors.details">
+        <source>editors.details</source>
+        <target>Editor's Details</target>
+        <jms:reference-file line="4">views/Editor/form.html.twig</jms:reference-file>
+      </trans-unit>
     </body>
   </file>
 </xliff>
