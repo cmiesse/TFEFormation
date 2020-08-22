@@ -955,6 +955,16 @@
         <target>Editor's Details</target>
         <jms:reference-file line="4">views/Editor/form.html.twig</jms:reference-file>
       </trans-unit>
+      <trans-unit id="calendars" resname="calendars">
+        <source>calendars</source>
+        <target>Calendars</target>
+        <jms:reference-file line="15">views/webmaster/calendar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="calendarlist" resname="calendar.list">
+        <source>calendar.list</source>
+        <target>Calendar's List</target>
+        <jms:reference-file line="22">views/webmaster/calendar.html.twig</jms:reference-file>
+      </trans-unit>
     </body>
   </file>
 </xliff>
