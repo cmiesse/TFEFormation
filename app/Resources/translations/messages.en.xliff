@@ -651,6 +651,42 @@
         <target>Identity Card Number</target>
         <jms:reference-file line="48">PlatformBundle/Form/TrainersType.php</jms:reference-file>
       </trans-unit>
+      <trans-unit id="ticvalidity" resname="trainer.identity.card.validity">
+        <source>trainer.identity.card.validity</source>
+        <target>Trainer identity card Validity</target>
+        <jms:reference-file line="60">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="idscan" resname="id.scan">
+        <source>id.scan</source>
+        <target>ID scan</target>
+        <jms:reference-file line="221">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="calendar" resname="calendar">
+        <source>calendar</source>
+        <target>Calendar</target>
+        <jms:reference-file line="201">views/Trainers/form.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="calendarid" resname="calendar.id">
+        <source>calendar.id</source>
+        <target>Calendar ID</target>
+        <jms:reference-file line="188">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="active" resname="active">
+        <source>active</source>
+        <target>Active</target>
+        <jms:reference-file line="194">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="color" resname="color">
+        <source>color</source>
+        <target>Color</target>
+        <jms:reference-file line="201">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+        <jms:reference-file line="316">views/Trainers/form.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="textcolor" resname="text.color">
+        <source>text.color</source>
+        <target>Text color</target>
+        <jms:reference-file line="208">PlatformBundle/Form/TrainersType.php</jms:reference-file>
+      </trans-unit>
       <trans-unit id="7d7aa9004f9a67b00aab66c46922aa55861d959a" resname="trainer.bstorm.mail">
         <source>trainer.bstorm.mail</source>
         <target>bstorm Mail</target>
