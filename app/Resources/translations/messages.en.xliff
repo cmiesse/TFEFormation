@@ -1001,6 +1001,11 @@
         <target>Calendar's List</target>
         <jms:reference-file line="22">views/webmaster/calendar.html.twig</jms:reference-file>
       </trans-unit>
+      <trans-unit id="passwordchange" resname="password.change">
+        <source>password.change</source>
+        <target>Password change</target>
+        <jms:reference-file line="47">Resources/views/layout.html.twig</jms:reference-file>
+      </trans-unit>
     </body>
   </file>
 </xliff>
