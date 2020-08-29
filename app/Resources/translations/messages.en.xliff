@@ -653,12 +653,12 @@
       </trans-unit>
       <trans-unit id="ticvalidity" resname="trainer.identity.card.validity">
         <source>trainer.identity.card.validity</source>
-        <target>Trainer identity card Validity</target>
+        <target>Trainer Identity Card Validity</target>
         <jms:reference-file line="60">PlatformBundle/Form/TrainersType.php</jms:reference-file>
       </trans-unit>
       <trans-unit id="idscan" resname="id.scan">
         <source>id.scan</source>
-        <target>ID scan</target>
+        <target>ID Scan</target>
         <jms:reference-file line="221">PlatformBundle/Form/TrainersType.php</jms:reference-file>
       </trans-unit>
       <trans-unit id="calendar" resname="calendar">
@@ -668,7 +668,7 @@
       </trans-unit>
       <trans-unit id="calendarid" resname="calendar.id">
         <source>calendar.id</source>
-        <target>Calendar ID</target>
+        <target>Calendar id</target>
         <jms:reference-file line="188">PlatformBundle/Form/TrainersType.php</jms:reference-file>
       </trans-unit>
       <trans-unit id="active" resname="active">
@@ -684,7 +684,7 @@
       </trans-unit>
       <trans-unit id="textcolor" resname="text.color">
         <source>text.color</source>
-        <target>Text color</target>
+        <target>Text Color</target>
         <jms:reference-file line="208">PlatformBundle/Form/TrainersType.php</jms:reference-file>
       </trans-unit>
       <trans-unit id="7d7aa9004f9a67b00aab66c46922aa55861d959a" resname="trainer.bstorm.mail">
@@ -922,13 +922,13 @@
       </trans-unit>
       <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa12" resname="password.new.verif">
         <source>password.new.verif</source>
-        <target>New password verification</target>
+        <target>New Password Verification</target>
         <jms:reference-file line="25">views/ChangePassword/changePassword_content.html.twig</jms:reference-file>
         <jms:reference-file line="18">views/Resetting/reset_content.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa13" resname="login.back">
         <source>login.back</source>
-        <target>Back to Login page</target>
+        <target>Back to Login Page</target>
         <jms:reference-file line="31">views/ChangePassword/changePassword_content.html.twig</jms:reference-file>
         <jms:reference-file line="11">views/Resetting/checkEmail.html.twig</jms:reference-file>
         <jms:reference-file line="11">views/Resetting/passwordAlreadyRequested.html.twig</jms:reference-file>
@@ -955,7 +955,7 @@
       </trans-unit>
       <trans-unit id="toolnew" resname="tool.new">
         <source>tool.new</source>
-        <target>New tool</target>
+        <target>New Tool</target>
         <jms:reference-file line="15">views/Tools/add.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="tooldetails" resname="tools.details">
@@ -978,7 +978,7 @@
       </trans-unit>
       <trans-unit id="editorname" resname="editor.name">
         <source>editor.name</source>
-        <target>Editor name</target>
+        <target>Editor Name</target>
         <jms:reference-file line="30">views/Editor/view.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="editornew" resname="editor.new">
