@@ -1,12 +1,6 @@
 <?php
 
 namespace TIC\PlatformBundle\Google;
-
-/**
- * Created by PhpStorm.
- * Date: 23-05-16
- * Time: 10:50
- */
 class GoogleCalendar
 {
     const APPLICATION_NAME =  'Google Calendar API PHP Quickstart';

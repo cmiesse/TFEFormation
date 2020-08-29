@@ -1,9 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * Date: 29-07-16
- * Time: 13:26
- */
 
 namespace TIC\PlatformBundle\Helpers;
 

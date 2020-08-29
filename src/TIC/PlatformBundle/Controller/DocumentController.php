@@ -1,9 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * Date: 22-06-16
- * Time: 14:54
- */
 namespace TIC\PlatformBundle\Controller;
 
 use Symfony\Component\HttpFoundation\BinaryFileResponse;

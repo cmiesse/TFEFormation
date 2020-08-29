@@ -1,9 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * Date: 25-05-16
- * Time: 11:34
- */
 namespace TIC\PlatformBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;

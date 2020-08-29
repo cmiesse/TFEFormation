@@ -1,9 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * Date: 25-05-16
- * Time: 11:40
- */
 namespace TIC\PlatformBundle\Controller;
 
 use Tools\CustomBundle\Controller\MasterController;

@@ -870,7 +870,7 @@
       </trans-unit>
       <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2" resname="email.and.password">
         <source>email.and.password</source>
-        <target>Email and password</target>
+        <target>Enter your email address and your password</target>
         <jms:reference-file line="6">views/Security/log.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa3" resname="login">
@@ -928,7 +928,7 @@
       </trans-unit>
       <trans-unit id="5aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa13" resname="login.back">
         <source>login.back</source>
-        <target>Back to login</target>
+        <target>Back to Login page</target>
         <jms:reference-file line="31">views/ChangePassword/changePassword_content.html.twig</jms:reference-file>
         <jms:reference-file line="11">views/Resetting/checkEmail.html.twig</jms:reference-file>
         <jms:reference-file line="11">views/Resetting/passwordAlreadyRequested.html.twig</jms:reference-file>
@@ -978,12 +978,12 @@
       </trans-unit>
       <trans-unit id="editorname" resname="editor.name">
         <source>editor.name</source>
-        <target>Editor Name</target>
+        <target>Editor name</target>
         <jms:reference-file line="30">views/Editor/view.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="editornew" resname="editor.new">
         <source>editor.new</source>
-        <target>New editor</target>
+        <target>New Editor</target>
         <jms:reference-file line="10">views/Editor/add.html.twig</jms:reference-file>
       </trans-unit>
       <trans-unit id="editorsdetails" resname="editors.details">

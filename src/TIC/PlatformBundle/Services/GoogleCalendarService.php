@@ -1,9 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * Date: 23-05-16
- * Time: 11:39
- */
 
 namespace TIC\PlatformBundle\Services;
 

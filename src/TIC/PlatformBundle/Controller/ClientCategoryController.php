@@ -1,9 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * Date: 24-05-16
- * Time: 09:54
- */
 namespace TIC\PlatformBundle\Controller;
 
 use TIC\PlatformBundle\Entity\ClientsCategories;
